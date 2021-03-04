@@ -82,9 +82,9 @@
 			children = (
 				D6AC6F1CD56CAD951925CB54 /* PinchNL-Core */,
 				95F1E9555A78D090DB2D3EE2 /* PinchNL-Models */,
-				AF3CC4F1D7E0AE490340F23D /* PinchNL-MVVM */,
 				0BC03F42BFBE06E7DF36E3BE /* PinchNL-Networking */,
 				97F5B6D7A801A2F2BE9FE58D /* PinchNL-Views */,
+				AF3CC4F1D7E0AE490340F23D /* PinchNL-MVVM */,
 				52F586F1ADE613283F65D7DC /* PinchNL-VIP */,
 				90195602C90BB274F21B0F85 /* Products */,
 				19C6B1D765DC8E5722515EFA /* Pods */,
@@ -97,6 +97,7 @@
 		03E4EB82645CDA1D143CCBAD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F09345B925F0705F00CE243E /* Photos */,
 				0F8F301FB58BA1DDDE1151F0 /* Album */,
 			);
 			path = Scenes;
@@ -106,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				F09345B125F06FFC00CE243E /* Targets */,
-				F09345A525F06F2900CE243E /* Scenes */,
 			);
 			path = "PinchNL-Networking";
 			sourceTree = "<group>";
@@ -114,6 +114,7 @@
 		0F8F301FB58BA1DDDE1151F0 /* Album */ = {
 			isa = PBXGroup;
 			children = (
+				F09345A725F06F7C00CE243E /* AlbumResponse.swift */,
 				F26F81A86306E3619039A01C /* AlbumModels.swift */,
 			);
 			path = Album;
@@ -131,7 +132,6 @@
 				EA9CB4340FD570C5A1509C7C /* Pods-PinchNL-VIP.integ.xcconfig */,
 				9ECF2F0A2C06FB7FA5D2D6DF /* Pods-PinchNL-VIP.test.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -194,23 +194,6 @@
 				598DA9BB9ABACEDD7EBB6F92 /* ViewController.swift */,
 			);
 			path = "PinchNL-Core";
-			sourceTree = "<group>";
-		};
-		F09345A525F06F2900CE243E /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				F09345B925F0705F00CE243E /* Photos */,
-				F09345A625F06F2F00CE243E /* Album */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		F09345A625F06F2F00CE243E /* Album */ = {
-			isa = PBXGroup;
-			children = (
-				F09345A725F06F7C00CE243E /* AlbumResponse.swift */,
-			);
-			path = Album;
 			sourceTree = "<group>";
 		};
 		F09345B125F06FFC00CE243E /* Targets */ = {
