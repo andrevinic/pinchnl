@@ -1,0 +1,98 @@
+name: PinchNL
+options:
+    bundleIdPrefix: com.pinch
+    createIntermediateGroups: true # If the folders are nested, also nest the groups in Xcode
+    indentWidth: 4 # indent by 4 spaces
+    tabWidth: 4 # a tab is 4 spaces
+configs:
+    Debug: debug
+    integ: debug
+    test: debug
+    Release: release
+targets:
+    PinchNL-MVVM:
+        type: application
+        platform: iOS
+        deploymentTarget: "13.0"
+        sources:
+            - path: PinchNL-MVVM
+            - path: PinchNL-Core
+            - path: PinchNL-Views
+
+    PinchNL-VIP:
+        type: application
+        platform: iOS
+        deploymentTarget: "13.0"
+        sources:
+            - path: PinchNL-VIP
+            - path: PinchNL-Core
+            - path: PinchNL-Views
+#    PinchNL-MVVMTests:
+#    type: bundle.unit-test
+#    platform: iOS
+#    deploymentTarget: "13.0"
+#    sources:
+#        - path: PinchNL-MVVMTests
+#    dependencies:
+#        - target: PinchNL-MVVM
+#    scheme:
+#        testTargets:
+#        - PinchNL-MVVM
+#        - PinchNL-MVVMTests
+#        gatherCoverageData: true
+
+
+schemes:
+    PinchNL-MVVM:
+        build:
+            targets:
+                PinchNL-MVVM: all
+                # {Project Name}Tests: [test] # デフォルト？
+                # {Project Name}UITests: [test] # デフォルト？
+        run:
+        config: Debug
+        # test:
+        #   config: Debug
+        #   gatherCoverageData: true
+        #   coverageTargets:
+        #     - {Project Name}
+        #   targets:
+        #     - name: {Project Name}Tests
+        #       parallelizable: true
+        #       randomExecutionOrder: true
+        #     - name: {Project Name}UITests
+        #       parallelizable: true
+        #       randomExecutionOrder: true
+        profile:
+        config: Release
+        analyze:
+        config: Debug
+        archive:
+        config: Release
+    
+    PinchNL-VIP:
+        build:
+            targets:
+                PinchNL-VIP: all
+                # {Project Name}Tests: [test] # デフォルト？
+                # {Project Name}UITests: [test] # デフォルト？
+        run:
+        config: Debug
+        # test:
+        #   config: Debug
+        #   gatherCoverageData: true
+        #   coverageTargets:
+        #     - {Project Name}
+        #   targets:
+        #     - name: {Project Name}Tests
+        #       parallelizable: true
+        #       randomExecutionOrder: true
+        #     - name: {Project Name}UITests
+        #       parallelizable: true
+        #       randomExecutionOrder: true
+        profile:
+        config: Release
+        analyze:
+        config: Debug
+        archive:
+        config: Release
