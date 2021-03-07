@@ -16,7 +16,7 @@ enum AlbumModels {
     }
     
     struct ViewModel {
-        
+        let id: Int
     }
     
     
