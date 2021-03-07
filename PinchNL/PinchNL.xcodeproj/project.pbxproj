@@ -45,6 +45,18 @@
 		F0CB75B825F547B700BCFB90 /* HandleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75B725F547B700BCFB90 /* HandleError.swift */; };
 		F0CB75BC25F5482500BCFB90 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75BB25F5482500BCFB90 /* Reachability.swift */; };
 		F0CB75C225F549EB00BCFB90 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75C125F549EB00BCFB90 /* BaseViewController.swift */; };
+		F0CB75C825F555DA00BCFB90 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75C725F555DA00BCFB90 /* AlbumView.swift */; };
+		F0CB75C925F555DA00BCFB90 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75C725F555DA00BCFB90 /* AlbumView.swift */; };
+		F0CB75CD25F55C3400BCFB90 /* PinchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75CC25F55C3400BCFB90 /* PinchView.swift */; };
+		F0CB75CE25F55C3400BCFB90 /* PinchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75CC25F55C3400BCFB90 /* PinchView.swift */; };
+		F0CB75D225F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */; };
+		F0CB75D325F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */; };
+		F0CB75D825F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */; };
+		F0CB75D925F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */; };
+		F0CB75DD25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */; };
+		F0CB75DE25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */; };
+		F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */; };
+		F0CB75E325F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */; };
 		F77A8273CCC41A7728AD68E4 /* Pods_PinchNL_VIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6D421D71E6A0EC073F2102 /* Pods_PinchNL_VIP.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +96,12 @@
 		F0CB75B725F547B700BCFB90 /* HandleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleError.swift; sourceTree = "<group>"; };
 		F0CB75BB25F5482500BCFB90 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		F0CB75C125F549EB00BCFB90 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F0CB75C725F555DA00BCFB90 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		F0CB75CC25F55C3400BCFB90 /* PinchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchView.swift; sourceTree = "<group>"; };
+		F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		F26F81A86306E3619039A01C /* AlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModels.swift; sourceTree = "<group>"; };
 		FC7ABBF08E60E9243D432E9D /* Pods-PinchNL-MVVM.integ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-MVVM.integ.xcconfig"; path = "Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM.integ.xcconfig"; sourceTree = "<group>"; };
 		FCC056622BD5B4B1009A2F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -205,6 +223,9 @@
 		97F5B6D7A801A2F2BE9FE58D /* PinchNL-Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0CB75D625F5652C00BCFB90 /* Base */,
+				F0CB75C725F555DA00BCFB90 /* AlbumView.swift */,
+				F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */,
 			);
 			path = "PinchNL-Views";
 			sourceTree = "<group>";
@@ -269,6 +290,8 @@
 			children = (
 				F038800825F53DBD00241D3B /* JSONDecoder+Extension.swift */,
 				F038801125F53DD100241D3B /* Single+Extension.swift */,
+				F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */,
+				F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,6 +328,15 @@
 				F0CB75BB25F5482500BCFB90 /* Reachability.swift */,
 			);
 			path = Connectivity;
+			sourceTree = "<group>";
+		};
+		F0CB75D625F5652C00BCFB90 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB75CC25F55C3400BCFB90 /* PinchView.swift */,
+				F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,8 +517,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0387FD725F512B000241D3B /* AlbumViewModel.swift in Sources */,
+				F0CB75D825F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */,
+				F0CB75C825F555DA00BCFB90 /* AlbumView.swift in Sources */,
 				83113EFDDBC349A19234B32F /* AlbumModels.swift in Sources */,
 				3A3E1BC142A8F169BEC12496 /* AppDelegate.swift in Sources */,
+				F0CB75D225F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */,
 				F0387FDB25F512BE00241D3B /* AlbumRepository.swift in Sources */,
 				F0387FDF25F512C600241D3B /* AlbumService.swift in Sources */,
 				F0387FEB25F53A1D00241D3B /* ListPhotoViewModel.swift in Sources */,
@@ -498,11 +533,14 @@
 				F09345B325F0701000CE243E /* PinchAPI.swift in Sources */,
 				F0387FD325F50F9700241D3B /* AlbumViewController.swift in Sources */,
 				F0CB75C225F549EB00BCFB90 /* BaseViewController.swift in Sources */,
+				F0CB75CD25F55C3400BCFB90 /* PinchView.swift in Sources */,
 				CA0DDD620B8F59CC2F7BB83C /* SceneDelegate.swift in Sources */,
 				F0CB75BC25F5482500BCFB90 /* Reachability.swift in Sources */,
 				F0CB75B825F547B700BCFB90 /* HandleError.swift in Sources */,
 				F0CB75B425F546D500BCFB90 /* BaseViewModel.swift in Sources */,
 				F0387FE525F53A1000241D3B /* ListPhotosViewController.swift in Sources */,
+				F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */,
+				F0CB75DD25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */,
 				F09345A825F06F7C00CE243E /* AlbumResponse.swift in Sources */,
 				ACE72C03888DFC7C70B11F4A /* ViewController.swift in Sources */,
 				F038801225F53DD100241D3B /* Single+Extension.swift in Sources */,
@@ -513,14 +551,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CB75E325F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */,
+				F0CB75DE25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */,
+				F0CB75D325F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */,
+				F0CB75D925F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */,
 				2FE761C8425A1ACAD84508D7 /* AlbumModels.swift in Sources */,
 				052EC7D6954955A12147F5E1 /* AppDelegate.swift in Sources */,
 				F09345BC25F0706E00CE243E /* PhotoResponse.swift in Sources */,
 				F09345B425F0701000CE243E /* PinchAPI.swift in Sources */,
+				F0CB75CE25F55C3400BCFB90 /* PinchView.swift in Sources */,
 				8F856A50AA03EA4A24790ECF /* SceneDelegate.swift in Sources */,
 				F09345AD25F06F8000CE243E /* AlbumResponse.swift in Sources */,
 				F038800E25F53DBF00241D3B /* JSONDecoder+Extension.swift in Sources */,
 				EB38A82F5662423706758FDC /* ViewController.swift in Sources */,
+				F0CB75C925F555DA00BCFB90 /* AlbumView.swift in Sources */,
 				F038801525F53DD300241D3B /* Single+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
