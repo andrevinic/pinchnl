@@ -46,3 +46,11 @@ class AlbumViewController: BaseViewController {
         }.disposed(by: self.disposeBag)
     }
 }
+
+extension AlbumViewController: AlbumViewDelegate {
+    
+    func didTapAlbum() {
+        
+    }
+    
+}

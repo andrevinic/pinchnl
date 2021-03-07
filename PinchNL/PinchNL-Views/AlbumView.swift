@@ -7,12 +7,26 @@
 
 import UIKit
 
+protocol AlbumViewDelegate: UICollectionViewDelegate {
+    func didTapAlbum()
+}
+
 protocol AlbumViewConfiguration: UIView {
     var collectionView: UICollectionView { get set }
+    var delegate:AlbumViewDelegate? { get set }
     func configureView(viewModel: [AlbumModels.ViewModel])
+    func didSelectAnAlbum()
 }
 
 class AlbumView: PinchView {
+    
+    // MARK: - Delegate
+    
+    weak var delegate: AlbumViewDelegate? {
+        didSet {
+            collectionView.delegate = delegate
+        }
+    }
     
     func configureView(viewModel: [AlbumModels.ViewModel]) {
         
@@ -44,4 +58,12 @@ class AlbumView: PinchView {
             
         ])
     }
+}
+
+extension AlbumView: AlbumViewConfiguration {
+   
+    func didSelectAnAlbum() {
+        
+    }
+
 }

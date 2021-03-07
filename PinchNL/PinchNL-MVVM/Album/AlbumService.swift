@@ -12,6 +12,7 @@ protocol AlbumServiceContract {
     var provider: PinchAPIProvider<PinchAPI> { get set }
     func fetch() -> Single<[AlbumResponse]>
 }
+
 class AlbumService: AlbumServiceContract {
     
     var provider: PinchAPIProvider<PinchAPI>

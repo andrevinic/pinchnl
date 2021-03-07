@@ -57,6 +57,8 @@
 		F0CB75DE25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */; };
 		F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */; };
 		F0CB75E325F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */; };
+		F0CB75F225F5700700BCFB90 /* PinchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */; };
+		F0CB75F325F5700700BCFB90 /* PinchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */; };
 		F77A8273CCC41A7728AD68E4 /* Pods_PinchNL_VIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6D421D71E6A0EC073F2102 /* Pods_PinchNL_VIP.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,7 @@
 		F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchCoordinator.swift; sourceTree = "<group>"; };
 		F26F81A86306E3619039A01C /* AlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModels.swift; sourceTree = "<group>"; };
 		FC7ABBF08E60E9243D432E9D /* Pods-PinchNL-MVVM.integ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-MVVM.integ.xcconfig"; path = "Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM.integ.xcconfig"; sourceTree = "<group>"; };
 		FCC056622BD5B4B1009A2F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -233,6 +236,7 @@
 		AF3CC4F1D7E0AE490340F23D /* PinchNL-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F0CB75F025F56FF600BCFB90 /* Coordinators */,
 				F0CB75BF25F549C500BCFB90 /* Base */,
 				F0387FE325F53A0200241D3B /* ListPhotos */,
 				F0387FE225F539F400241D3B /* Album */,
@@ -337,6 +341,14 @@
 				F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		F0CB75F025F56FF600BCFB90 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,6 +549,7 @@
 				CA0DDD620B8F59CC2F7BB83C /* SceneDelegate.swift in Sources */,
 				F0CB75BC25F5482500BCFB90 /* Reachability.swift in Sources */,
 				F0CB75B825F547B700BCFB90 /* HandleError.swift in Sources */,
+				F0CB75F225F5700700BCFB90 /* PinchCoordinator.swift in Sources */,
 				F0CB75B425F546D500BCFB90 /* BaseViewModel.swift in Sources */,
 				F0387FE525F53A1000241D3B /* ListPhotosViewController.swift in Sources */,
 				F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */,
@@ -558,6 +571,7 @@
 				2FE761C8425A1ACAD84508D7 /* AlbumModels.swift in Sources */,
 				052EC7D6954955A12147F5E1 /* AppDelegate.swift in Sources */,
 				F09345BC25F0706E00CE243E /* PhotoResponse.swift in Sources */,
+				F0CB75F325F5700700BCFB90 /* PinchCoordinator.swift in Sources */,
 				F09345B425F0701000CE243E /* PinchAPI.swift in Sources */,
 				F0CB75CE25F55C3400BCFB90 /* PinchView.swift in Sources */,
 				8F856A50AA03EA4A24790ECF /* SceneDelegate.swift in Sources */,
