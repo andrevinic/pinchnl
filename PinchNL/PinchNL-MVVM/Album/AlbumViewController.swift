@@ -33,6 +33,7 @@ class AlbumViewController: BaseViewController {
     
     private func configureView() {
         view = _view
+        self._view.delegate = self
         viewModel.requestAlbum()
     }
     
@@ -42,8 +43,16 @@ class AlbumViewController: BaseViewController {
                                 .rx
                                 .items(cellIdentifier: AlbumCollectionViewCell.className,
                                        cellType: AlbumCollectionViewCell.self)) { _, element, cell in
-            cell.set(element.id)
+            cell.set(element.title)
         }.disposed(by: self.disposeBag)
+        
+        self._view.collectionView
+            .rx
+            .modelSelected(AlbumModels.ViewModel.self)
+            .subscribe (onNext: { (response) in
+                print(response.title)
+            }).disposed(by: self.disposeBag)
+        
     }
 }
 
@@ -52,5 +61,12 @@ extension AlbumViewController: AlbumViewDelegate {
     func didTapAlbum() {
         
     }
-    
+}
+
+extension AlbumViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width
+        let height = CGFloat(50)
+        return CGSize(width: width, height: height)
+    }
 }

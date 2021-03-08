@@ -15,10 +15,9 @@ protocol AlbumViewConfiguration: UIView {
     var collectionView: UICollectionView { get set }
     var delegate:AlbumViewDelegate? { get set }
     func configureView(viewModel: [AlbumModels.ViewModel])
-    func didSelectAnAlbum()
 }
 
-class AlbumView: PinchView {
+class AlbumView: PinchView, AlbumViewConfiguration {
     
     // MARK: - Delegate
     
@@ -36,8 +35,8 @@ class AlbumView: PinchView {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+        collectionView.backgroundColor = .white
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(cellTypes: [PinchCollectionViewCell.self])
         return collectionView
     }()
     
@@ -46,7 +45,8 @@ class AlbumView: PinchView {
     }
     
     override func setupConfigurations() {
-        
+        backgroundColor = UIColor.white
+        collectionView.register(cellType: AlbumCollectionViewCell.self)
     }
     
     override func setupConstraints() {
@@ -58,12 +58,4 @@ class AlbumView: PinchView {
             
         ])
     }
-}
-
-extension AlbumView: AlbumViewConfiguration {
-   
-    func didSelectAnAlbum() {
-        
-    }
-
 }

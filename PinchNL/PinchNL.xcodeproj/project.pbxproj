@@ -10,18 +10,14 @@
 		052EC7D6954955A12147F5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A516F5C9C085A5B967D54 /* AppDelegate.swift */; };
 		2FE761C8425A1ACAD84508D7 /* AlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F81A86306E3619039A01C /* AlbumModels.swift */; };
 		3A3E1BC142A8F169BEC12496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A516F5C9C085A5B967D54 /* AppDelegate.swift */; };
-		47962008C63FEF15461D6689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F1E430E88192C6B7DD787A /* Main.storyboard */; };
 		83113EFDDBC349A19234B32F /* AlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F81A86306E3619039A01C /* AlbumModels.swift */; };
-		8414314D5CFD8D851908D110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F1E430E88192C6B7DD787A /* Main.storyboard */; };
 		8BC13DD93F4B7A5A9D39C4A4 /* Pods_PinchNL_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830087685FE69B1330BFF3F5 /* Pods_PinchNL_MVVM.framework */; };
 		8F856A50AA03EA4A24790ECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B372B77A88EA853293524F /* SceneDelegate.swift */; };
 		95E82D1A3019E86DE71271B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A56BD1F9DA46F2C7ED0F09 /* LaunchScreen.storyboard */; };
-		ACE72C03888DFC7C70B11F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DA9BB9ABACEDD7EBB6F92 /* ViewController.swift */; };
 		ADC16844649EF564F4B42243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC056622BD5B4B1009A2F85 /* Assets.xcassets */; };
 		BAE3B87F59417ACFE952A595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A56BD1F9DA46F2C7ED0F09 /* LaunchScreen.storyboard */; };
 		C0219B1E0FA3A98020A11292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC056622BD5B4B1009A2F85 /* Assets.xcassets */; };
 		CA0DDD620B8F59CC2F7BB83C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B372B77A88EA853293524F /* SceneDelegate.swift */; };
-		EB38A82F5662423706758FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DA9BB9ABACEDD7EBB6F92 /* ViewController.swift */; };
 		F0387FD325F50F9700241D3B /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FD225F50F9700241D3B /* AlbumViewController.swift */; };
 		F0387FD725F512B000241D3B /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FD625F512B000241D3B /* AlbumViewModel.swift */; };
 		F0387FDB25F512BE00241D3B /* AlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FDA25F512BE00241D3B /* AlbumRepository.swift */; };
@@ -59,6 +55,8 @@
 		F0CB75E325F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */; };
 		F0CB75F225F5700700BCFB90 /* PinchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */; };
 		F0CB75F325F5700700BCFB90 /* PinchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */; };
+		F0CB760725F5AC4B00BCFB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB760625F5AC4B00BCFB90 /* Main.storyboard */; };
+		F0CB760825F5AC4B00BCFB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB760625F5AC4B00BCFB90 /* Main.storyboard */; };
 		F77A8273CCC41A7728AD68E4 /* Pods_PinchNL_VIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6D421D71E6A0EC073F2102 /* Pods_PinchNL_VIP.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,8 +68,6 @@
 		24F3E9F9CDD965C8C5301CE4 /* Pods-PinchNL-MVVM.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-MVVM.test.xcconfig"; path = "Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM.test.xcconfig"; sourceTree = "<group>"; };
 		2A36778843CCFC10646BB0E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31E8A9ECDBD14CED09F83DDA /* PinchNL-MVVM.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "PinchNL-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		598DA9BB9ABACEDD7EBB6F92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		78F00A3C05F5A219D5068BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		830087685FE69B1330BFF3F5 /* Pods_PinchNL_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchNL_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDB188DD03A08FC7D88CDF6 /* Pods-PinchNL-VIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.debug.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.debug.xcconfig"; sourceTree = "<group>"; };
 		9ECF2F0A2C06FB7FA5D2D6DF /* Pods-PinchNL-VIP.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.test.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.test.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +101,7 @@
 		F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchCoordinator.swift; sourceTree = "<group>"; };
+		F0CB760625F5AC4B00BCFB90 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F26F81A86306E3619039A01C /* AlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModels.swift; sourceTree = "<group>"; };
 		FC7ABBF08E60E9243D432E9D /* Pods-PinchNL-MVVM.integ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-MVVM.integ.xcconfig"; path = "Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM.integ.xcconfig"; sourceTree = "<group>"; };
 		FCC056622BD5B4B1009A2F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -226,9 +223,8 @@
 		97F5B6D7A801A2F2BE9FE58D /* PinchNL-Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0CB760B25F5ACA000BCFB90 /* Album */,
 				F0CB75D625F5652C00BCFB90 /* Base */,
-				F0CB75C725F555DA00BCFB90 /* AlbumView.swift */,
-				F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */,
 			);
 			path = "PinchNL-Views";
 			sourceTree = "<group>";
@@ -249,12 +245,11 @@
 			children = (
 				F038800725F53DA900241D3B /* Extensions */,
 				9F8A516F5C9C085A5B967D54 /* AppDelegate.swift */,
+				F0CB760625F5AC4B00BCFB90 /* Main.storyboard */,
 				FCC056622BD5B4B1009A2F85 /* Assets.xcassets */,
 				12507B3E2FD748E2F89C32A6 /* Info.plist */,
 				49A56BD1F9DA46F2C7ED0F09 /* LaunchScreen.storyboard */,
-				61F1E430E88192C6B7DD787A /* Main.storyboard */,
 				22B372B77A88EA853293524F /* SceneDelegate.swift */,
-				598DA9BB9ABACEDD7EBB6F92 /* ViewController.swift */,
 			);
 			path = "PinchNL-Core";
 			sourceTree = "<group>";
@@ -351,6 +346,15 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		F0CB760B25F5ACA000BCFB90 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB75C725F555DA00BCFB90 /* AlbumView.swift */,
+				F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,9 +428,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CB760725F5AC4B00BCFB90 /* Main.storyboard in Resources */,
 				ADC16844649EF564F4B42243 /* Assets.xcassets in Resources */,
 				BAE3B87F59417ACFE952A595 /* LaunchScreen.storyboard in Resources */,
-				47962008C63FEF15461D6689 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,9 +438,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CB760825F5AC4B00BCFB90 /* Main.storyboard in Resources */,
 				C0219B1E0FA3A98020A11292 /* Assets.xcassets in Resources */,
 				95E82D1A3019E86DE71271B7 /* LaunchScreen.storyboard in Resources */,
-				8414314D5CFD8D851908D110 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +559,6 @@
 				F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */,
 				F0CB75DD25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */,
 				F09345A825F06F7C00CE243E /* AlbumResponse.swift in Sources */,
-				ACE72C03888DFC7C70B11F4A /* ViewController.swift in Sources */,
 				F038801225F53DD100241D3B /* Single+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,7 +580,6 @@
 				8F856A50AA03EA4A24790ECF /* SceneDelegate.swift in Sources */,
 				F09345AD25F06F8000CE243E /* AlbumResponse.swift in Sources */,
 				F038800E25F53DBF00241D3B /* JSONDecoder+Extension.swift in Sources */,
-				EB38A82F5662423706758FDC /* ViewController.swift in Sources */,
 				F0CB75C925F555DA00BCFB90 /* AlbumView.swift in Sources */,
 				F038801525F53DD300241D3B /* Single+Extension.swift in Sources */,
 			);
@@ -592,14 +594,6 @@
 				2A36778843CCFC10646BB0E8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		61F1E430E88192C6B7DD787A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				78F00A3C05F5A219D5068BF7 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

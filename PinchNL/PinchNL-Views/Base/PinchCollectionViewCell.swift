@@ -24,10 +24,19 @@ class PinchCollectionViewCell: UICollectionViewCell, BaseView {
     @available(*, unavailable)
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
+        self.translatesAutoresizingMaskIntoConstraints = true
+        setupView()
     }
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("This object should not be used on Interface Builder")
     }
+    
+    func setupView() {
+        setupHierarchy()
+        setupConstraints()
+        setupConfigurations()
+    }
+    
 }

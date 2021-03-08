@@ -37,7 +37,10 @@ class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
     private func makeAlbumListModel(_ response: [AlbumResponse]) -> [AlbumModels.ViewModel] {
         var albumModels: [AlbumModels.ViewModel] = []
         response.forEach {
-            let albumModel = AlbumModels.ViewModel(id: String($0.id))
+            let albumModel = AlbumModels.ViewModel(
+                id: String($0.id),
+                title: $0.title
+            )
             albumModels.append(albumModel)
         }
         return albumModels
