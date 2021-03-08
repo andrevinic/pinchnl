@@ -8,7 +8,7 @@
 import RxSwift
 
 protocol AlbumRepositoryContract {
-    func requestAlbum() -> Single<[AlbumResponse]>
+    func requestAlbum(page: Int) -> Single<[AlbumResponse]>
 }
 class AlbumRepository: AlbumRepositoryContract {
     
@@ -20,7 +20,7 @@ class AlbumRepository: AlbumRepositoryContract {
         self.service = service
     }
     
-    func requestAlbum() -> Single<[AlbumResponse]> {
-        return service.fetch()
+    func requestAlbum(page: Int) -> Single<[AlbumResponse]> {
+        return service.fetch(page: page)
     }
 }

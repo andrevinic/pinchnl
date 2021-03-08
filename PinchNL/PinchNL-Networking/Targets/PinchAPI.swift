@@ -9,8 +9,8 @@ import Foundation
 import Moya
 
 enum PinchAPI {
-    case album
-    case photo(albumId: Int, pagination: Int)
+    case album(page: Int)
+    case photos(albumId: Int, pagination: Int)
 }
 
 extension PinchAPI: TargetType {
@@ -23,7 +23,7 @@ extension PinchAPI: TargetType {
         switch self {
         case .album:
             return "/albums"
-        case .photo:
+        case .photos:
             return "/photos"
         }
     }
@@ -36,14 +36,27 @@ extension PinchAPI: TargetType {
         switch self {
         case .album:
             break
-        case .photo:
+        case .photos:
             break
         }
         return Data()
     }
     
     var task: Task {
+        if let `parameters` = parameters {
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+        }
         return .requestPlain
+    }
+    
+    var parameters: [String: Any]? {
+        switch self {
+        
+        case .album(let page):
+            return ["page": page]
+        case .photos(let albumId, let page):
+            return ["albumId": albumId, "page": page]
+        }
     }
     
     var headers: [String : String]? {

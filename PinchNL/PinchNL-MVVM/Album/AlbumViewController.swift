@@ -10,6 +10,9 @@ import UIKit
 
 class AlbumViewController: BaseViewController {
     
+    // MARK: - Properties
+    private var page = 1
+    
     // MARK: - ViewModel
     private let viewModel: AlbumViewModelContract
     
@@ -34,7 +37,8 @@ class AlbumViewController: BaseViewController {
     private func configureView() {
         view = _view
         self._view.delegate = self
-        viewModel.requestAlbum()
+        viewModel.requestAlbum(page: page)
+        page += 1
     }
     
     private func bindProperties() {
@@ -68,5 +72,13 @@ extension AlbumViewController: UICollectionViewDelegateFlowLayout {
         let width = collectionView.bounds.width
         let height = CGFloat(50)
         return CGSize(width: width, height: height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
+        if bottomEdge > scrollView.contentSize.height {
+            self.viewModel.requestAlbum(page: page)
+            page += 1
+        }
     }
 }

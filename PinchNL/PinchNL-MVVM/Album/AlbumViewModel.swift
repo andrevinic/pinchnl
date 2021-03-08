@@ -10,7 +10,7 @@ import RxCocoa
 
 protocol AlbumViewModelContract {
     var albums:Driver<[AlbumModels.ViewModel]> { get set }
-    func requestAlbum()
+    func requestAlbum(page: Int)
 }
 class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
     
@@ -18,6 +18,7 @@ class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
     lazy var albums:Driver<[AlbumModels.ViewModel]> = {
         _albums.asDriver(onErrorJustReturn: [])
     }()
+    private var albumModels: [AlbumModels.ViewModel] = []
     
     private let repository: AlbumRepositoryContract
     
@@ -25,9 +26,9 @@ class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
         self.repository = repository
     }
     
-    func requestAlbum() {
+    func requestAlbum(page: Int) {
         repository
-            .requestAlbum()
+            .requestAlbum(page: page)
             .subscribe(onSuccess: { [unowned self] (response) in
                 self._albums.onNext(self.makeAlbumListModel(response))
             }, onError: self.handleError(error:))
@@ -35,7 +36,6 @@ class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
     }
     
     private func makeAlbumListModel(_ response: [AlbumResponse]) -> [AlbumModels.ViewModel] {
-        var albumModels: [AlbumModels.ViewModel] = []
         response.forEach {
             let albumModel = AlbumModels.ViewModel(
                 id: String($0.id),

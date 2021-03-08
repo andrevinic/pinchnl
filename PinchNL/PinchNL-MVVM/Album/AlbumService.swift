@@ -10,7 +10,7 @@ import RxSwift
 
 protocol AlbumServiceContract {
     var provider: PinchAPIProvider<PinchAPI> { get set }
-    func fetch() -> Single<[AlbumResponse]>
+    func fetch(page: Int) -> Single<[AlbumResponse]>
 }
 
 class AlbumService: AlbumServiceContract {
@@ -21,10 +21,10 @@ class AlbumService: AlbumServiceContract {
         provider = apiProvider
     }
     
-    func fetch() -> Single<[AlbumResponse]> {
+    func fetch(page: Int) -> Single<[AlbumResponse]> {
         return self.provider
             .rx
-            .request(.album)
+            .request(.album(page: page))
             .mapEntity([AlbumResponse].self)
     }
     
