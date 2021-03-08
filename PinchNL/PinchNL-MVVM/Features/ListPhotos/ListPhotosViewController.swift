@@ -8,6 +8,8 @@
 import UIKit
 
 class ListPhotosViewController: PinchViewController {
+    
+    private var choosedPhoto: PhotosModels.ViewModel?
 
     private let viewModel: ListPhotosViewModelContract
     private let coordinator: Coordinator
@@ -35,6 +37,7 @@ class ListPhotosViewController: PinchViewController {
         self._view.delegate = self
         requestPhotos()
     }
+    
     private func requestPhotos() {
         self.viewModel.fetchListPhotos()
     }
@@ -51,16 +54,24 @@ class ListPhotosViewController: PinchViewController {
         ) { _ , element, cell in
             cell.set(thumbnailUrl: element.thumbnailUrl, title: element.title)
         }.disposed(by: self.disposeBag)
-       
+        
+        self._view.collectionView
+            .rx
+            .modelSelected(PhotosModels.ViewModel.self)
+            .subscribe (
+                onNext: { [weak self] (response) in
+                    self?.choosedPhoto = response
+                    self?.didTapPhoto()
+                }
+            ).disposed(by: self.disposeBag)
     }
-    
-  
 }
 
 extension ListPhotosViewController: PhotosViewDelegate {
     
     func didTapPhoto() {
-        
+        guard let model = choosedPhoto else { return }
+        self.coordinator.startPhotoDetail(model: model)
     }
     
 }
@@ -70,12 +81,5 @@ extension ListPhotosViewController: UICollectionViewDelegateFlowLayout {
         let width = collectionView.bounds.width
         let height = width
         return CGSize(width: width, height: height)
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
-        if bottomEdge > scrollView.contentSize.height {
-//            requestAlbum()
-        }
     }
 }

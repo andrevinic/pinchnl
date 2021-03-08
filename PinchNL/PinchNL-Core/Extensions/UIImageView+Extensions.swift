@@ -18,14 +18,10 @@ extension UIImageView {
             return
         }
         self.kf.indicatorType = .activity
-        let processor = DownsamplingImageProcessor(size: self.bounds.size)
-                     |> RoundCornerImageProcessor(cornerRadius: 20)
-
         self.kf.setImage(
             with: URL(string: imageUrl),
             placeholder: placeHolder,
             options: [
-                .processor(processor),
                 .scaleFactor(UIScreen.main.scale),
                 .transition(.fade(1)),
                 .cacheOriginalImage

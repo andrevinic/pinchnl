@@ -65,7 +65,8 @@ class AlbumViewController: PinchViewController {
             .subscribe (
                 onNext: { [weak self] (response) in
                     self?.choosedAlbum = response
-                    self?.didTapAlbum() }
+                    self?.didTapAlbum()
+                }
             ).disposed(by: self.disposeBag)
     }
     

@@ -12,10 +12,10 @@ protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get set }
     func startAlbum()
     func startPhotos(model: AlbumModels.ViewModel, page: Int)
+    func startPhotoDetail(model: PhotosModels.ViewModel)
 }
 
 class PinchCoordinator: Coordinator {
-    
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -55,6 +55,12 @@ class PinchCoordinator: Coordinator {
             coordinator: self
         )
         navigationController.pushViewController(viewController, animated: false)
-        
+    }
+    
+    func startPhotoDetail(model: PhotosModels.ViewModel) {
+        let viewModel = PhotoDetailViewModel(photoSelected: model)
+        let view = PhotoDetailView()
+        let viewController = PhotoDetailViewController(view: view, viewModel: viewModel)
+        self.navigationController.show(viewController, sender: self)
     }
 }

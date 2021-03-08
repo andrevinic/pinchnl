@@ -39,6 +39,10 @@
 		F09345BC25F0706E00CE243E /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345BA25F0706E00CE243E /* PhotoResponse.swift */; };
 		F0AD84AB25F6D434004843C4 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84AA25F6D434004843C4 /* UIImageView+Extensions.swift */; };
 		F0AD84AC25F6D434004843C4 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84AA25F6D434004843C4 /* UIImageView+Extensions.swift */; };
+		F0AD84BD25F6DD2E004843C4 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84BC25F6DD2E004843C4 /* PhotoDetailViewController.swift */; };
+		F0AD84C125F6DDED004843C4 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84C025F6DDED004843C4 /* PhotoDetailViewModel.swift */; };
+		F0AD84C625F6DEAE004843C4 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84C525F6DEAE004843C4 /* PhotoDetailView.swift */; };
+		F0AD84C925F6DEB1004843C4 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84C525F6DEAE004843C4 /* PhotoDetailView.swift */; };
 		F0CB75B425F546D500BCFB90 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75B325F546D500BCFB90 /* BaseViewModel.swift */; };
 		F0CB75B825F547B700BCFB90 /* HandleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75B725F547B700BCFB90 /* HandleError.swift */; };
 		F0CB75BC25F5482500BCFB90 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75BB25F5482500BCFB90 /* Reachability.swift */; };
@@ -75,7 +79,7 @@
 		22B372B77A88EA853293524F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24F3E9F9CDD965C8C5301CE4 /* Pods-PinchNL-MVVM.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-MVVM.test.xcconfig"; path = "Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM.test.xcconfig"; sourceTree = "<group>"; };
 		2A36778843CCFC10646BB0E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		31E8A9ECDBD14CED09F83DDA /* PinchNL-MVVM.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "PinchNL-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31E8A9ECDBD14CED09F83DDA /* PinchNL-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PinchNL-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		830087685FE69B1330BFF3F5 /* Pods_PinchNL_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchNL_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDB188DD03A08FC7D88CDF6 /* Pods-PinchNL-VIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.debug.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.debug.xcconfig"; sourceTree = "<group>"; };
 		9ECF2F0A2C06FB7FA5D2D6DF /* Pods-PinchNL-VIP.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.test.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.test.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +103,9 @@
 		F09345B225F0701000CE243E /* PinchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAPI.swift; sourceTree = "<group>"; };
 		F09345BA25F0706E00CE243E /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
 		F0AD84AA25F6D434004843C4 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		F0AD84BC25F6DD2E004843C4 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		F0AD84C025F6DDED004843C4 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		F0AD84C525F6DEAE004843C4 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		F0CB75B325F546D500BCFB90 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		F0CB75B725F547B700BCFB90 /* HandleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleError.swift; sourceTree = "<group>"; };
 		F0CB75BB25F5482500BCFB90 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -235,6 +242,7 @@
 		97F5B6D7A801A2F2BE9FE58D /* PinchNL-Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0AD84C425F6DEA2004843C4 /* PhotoDetail */,
 				F0F9337E25F67307008BED1C /* Photos */,
 				F0CB760B25F5ACA000BCFB90 /* Album */,
 				F0CB75D625F5652C00BCFB90 /* Base */,
@@ -245,10 +253,9 @@
 		AF3CC4F1D7E0AE490340F23D /* PinchNL-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F0AD84BA25F6DD04004843C4 /* Features */,
 				F0CB75F025F56FF600BCFB90 /* Coordinators */,
 				F0CB75BF25F549C500BCFB90 /* Base */,
-				F0387FE325F53A0200241D3B /* ListPhotos */,
-				F0387FE225F539F400241D3B /* Album */,
 			);
 			path = "PinchNL-MVVM";
 			sourceTree = "<group>";
@@ -324,6 +331,33 @@
 				F0F9337525F655B1008BED1C /* PhotosModels.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		F0AD84BA25F6DD04004843C4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F0AD84BB25F6DD1B004843C4 /* PhotoDetail */,
+				F0387FE325F53A0200241D3B /* ListPhotos */,
+				F0387FE225F539F400241D3B /* Album */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F0AD84BB25F6DD1B004843C4 /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F0AD84BC25F6DD2E004843C4 /* PhotoDetailViewController.swift */,
+				F0AD84C025F6DDED004843C4 /* PhotoDetailViewModel.swift */,
+			);
+			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		F0AD84C425F6DEA2004843C4 /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F0AD84C525F6DEAE004843C4 /* PhotoDetailView.swift */,
+			);
+			path = PhotoDetail;
 			sourceTree = "<group>";
 		};
 		F0CB75BF25F549C500BCFB90 /* Base */ = {
@@ -572,17 +606,20 @@
 				F09345BB25F0706E00CE243E /* PhotoResponse.swift in Sources */,
 				F0AD84AB25F6D434004843C4 /* UIImageView+Extensions.swift in Sources */,
 				F038800925F53DBD00241D3B /* JSONDecoder+Extension.swift in Sources */,
+				F0AD84C125F6DDED004843C4 /* PhotoDetailViewModel.swift in Sources */,
 				F09345B325F0701000CE243E /* PinchAPI.swift in Sources */,
 				F0387FD325F50F9700241D3B /* AlbumViewController.swift in Sources */,
 				F0CB75C225F549EB00BCFB90 /* PinchViewController.swift in Sources */,
 				F0F9338025F67314008BED1C /* PhotosView.swift in Sources */,
 				F0CB75CD25F55C3400BCFB90 /* PinchView.swift in Sources */,
 				CA0DDD620B8F59CC2F7BB83C /* SceneDelegate.swift in Sources */,
+				F0AD84C625F6DEAE004843C4 /* PhotoDetailView.swift in Sources */,
 				F0CB75BC25F5482500BCFB90 /* Reachability.swift in Sources */,
 				F0CB75B825F547B700BCFB90 /* HandleError.swift in Sources */,
 				F0CB75F225F5700700BCFB90 /* PinchCoordinator.swift in Sources */,
 				F0CB75B425F546D500BCFB90 /* BaseViewModel.swift in Sources */,
 				F0F9337625F655B1008BED1C /* PhotosModels.swift in Sources */,
+				F0AD84BD25F6DD2E004843C4 /* PhotoDetailViewController.swift in Sources */,
 				F0387FE525F53A1000241D3B /* ListPhotosViewController.swift in Sources */,
 				F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */,
 				F0CB75DD25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */,
@@ -603,6 +640,7 @@
 				F0AD84AC25F6D434004843C4 /* UIImageView+Extensions.swift in Sources */,
 				052EC7D6954955A12147F5E1 /* AppDelegate.swift in Sources */,
 				F09345BC25F0706E00CE243E /* PhotoResponse.swift in Sources */,
+				F0AD84C925F6DEB1004843C4 /* PhotoDetailView.swift in Sources */,
 				F0CB75F325F5700700BCFB90 /* PinchCoordinator.swift in Sources */,
 				F09345B425F0701000CE243E /* PinchAPI.swift in Sources */,
 				F0CB75CE25F55C3400BCFB90 /* PinchView.swift in Sources */,
@@ -771,6 +809,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6JNNVVHR28;
 				INFOPLIST_FILE = "PinchNL-Core/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -789,6 +828,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6JNNVVHR28;
 				INFOPLIST_FILE = "PinchNL-Core/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -862,6 +902,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6JNNVVHR28;
 				INFOPLIST_FILE = "PinchNL-Core/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1004,6 +1045,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6JNNVVHR28;
 				INFOPLIST_FILE = "PinchNL-Core/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

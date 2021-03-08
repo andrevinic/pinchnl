@@ -26,6 +26,8 @@ class PhotosCollectionViewCell: PinchCollectionViewCell {
     private lazy var thumbnail: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleToFill
+
         return image
     }()
     
@@ -51,11 +53,11 @@ class PhotosCollectionViewCell: PinchCollectionViewCell {
             
             titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 5),
             titleLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 5),
-            titleLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: 5),
+            titleLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -5),
             
             thumbnail.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             thumbnail.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 5),
-            thumbnail.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: 5),
+            thumbnail.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -5),
             thumbnail.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
         
         ])
