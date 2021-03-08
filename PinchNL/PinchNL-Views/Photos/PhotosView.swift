@@ -1,34 +1,32 @@
 //
-//  AlbumView.swift
+//  PhotosView.swift
 //  PinchNL
 //
-//  Created by Andre Nogueira on 07/03/21.
+//  Created by Andre Nogueira on 08/03/21.
 //
 
 import UIKit
 
-protocol AlbumViewDelegate: UICollectionViewDelegate {
-    func didTapAlbum()
+protocol PhotosViewDelegate: UICollectionViewDelegate {
+    func didTapPhoto()
 }
 
-protocol AlbumViewConfiguration: UIView {
+protocol PhotosViewConfiguration: UIView {
     var collectionView: UICollectionView { get set }
-    var delegate: AlbumViewDelegate? { get set }
-    func configureView(viewModel: [AlbumModels.ViewModel])
+    var delegate: PhotosViewDelegate? { get set }
+    func configureView()
 }
 
-class AlbumView: PinchView, AlbumViewConfiguration {
+class PhotosView: PinchView, PhotosViewConfiguration {
     
-    // MARK: - Delegate
+    func configureView() {
+        
+    }
     
-    weak var delegate: AlbumViewDelegate? {
+    weak var delegate: PhotosViewDelegate? {
         didSet {
             collectionView.delegate = delegate
         }
-    }
-    
-    func configureView(viewModel: [AlbumModels.ViewModel]) {
-        
     }
     
     lazy var collectionView: UICollectionView = {
@@ -46,7 +44,7 @@ class AlbumView: PinchView, AlbumViewConfiguration {
     
     override func setupConfigurations() {
         backgroundColor = UIColor.white
-        collectionView.register(cellType: AlbumCollectionViewCell.self)
+        collectionView.register(cellType: PhotosCollectionViewCell.self)
     }
     
     override func setupConstraints() {
@@ -55,7 +53,6 @@ class AlbumView: PinchView, AlbumViewConfiguration {
             collectionView.leftAnchor.constraint(equalTo: leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
-            
         ])
     }
 }

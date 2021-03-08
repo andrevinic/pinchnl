@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13, *) {} else {
             let navigation = UINavigationController()
             let coordinator = PinchCoordinator(navigationController: navigation)
-            coordinator.start()
+            coordinator.startAlbum()
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.rootViewController = navigation
             window?.makeKeyAndVisible()
