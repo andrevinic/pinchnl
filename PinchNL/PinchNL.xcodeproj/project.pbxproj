@@ -8,44 +8,184 @@
 
 /* Begin PBXBuildFile section */
 		052EC7D6954955A12147F5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A516F5C9C085A5B967D54 /* AppDelegate.swift */; };
+		2FE761C8425A1ACAD84508D7 /* AlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F81A86306E3619039A01C /* AlbumModels.swift */; };
 		3A3E1BC142A8F169BEC12496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A516F5C9C085A5B967D54 /* AppDelegate.swift */; };
-		47962008C63FEF15461D6689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F1E430E88192C6B7DD787A /* Main.storyboard */; };
-		8414314D5CFD8D851908D110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61F1E430E88192C6B7DD787A /* Main.storyboard */; };
+		83113EFDDBC349A19234B32F /* AlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F81A86306E3619039A01C /* AlbumModels.swift */; };
+		8BC13DD93F4B7A5A9D39C4A4 /* Pods_PinchNL_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830087685FE69B1330BFF3F5 /* Pods_PinchNL_MVVM.framework */; };
 		8F856A50AA03EA4A24790ECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B372B77A88EA853293524F /* SceneDelegate.swift */; };
 		95E82D1A3019E86DE71271B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A56BD1F9DA46F2C7ED0F09 /* LaunchScreen.storyboard */; };
-		ACE72C03888DFC7C70B11F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DA9BB9ABACEDD7EBB6F92 /* ViewController.swift */; };
 		ADC16844649EF564F4B42243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC056622BD5B4B1009A2F85 /* Assets.xcassets */; };
 		BAE3B87F59417ACFE952A595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A56BD1F9DA46F2C7ED0F09 /* LaunchScreen.storyboard */; };
 		C0219B1E0FA3A98020A11292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC056622BD5B4B1009A2F85 /* Assets.xcassets */; };
 		CA0DDD620B8F59CC2F7BB83C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B372B77A88EA853293524F /* SceneDelegate.swift */; };
-		EB38A82F5662423706758FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598DA9BB9ABACEDD7EBB6F92 /* ViewController.swift */; };
+		F0387FD325F50F9700241D3B /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FD225F50F9700241D3B /* AlbumViewController.swift */; };
+		F0387FD725F512B000241D3B /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FD625F512B000241D3B /* AlbumViewModel.swift */; };
+		F0387FDB25F512BE00241D3B /* AlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FDA25F512BE00241D3B /* AlbumRepository.swift */; };
+		F0387FDF25F512C600241D3B /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FDE25F512C600241D3B /* AlbumService.swift */; };
+		F0387FE525F53A1000241D3B /* ListPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FE425F53A1000241D3B /* ListPhotosViewController.swift */; };
+		F0387FEB25F53A1D00241D3B /* ListPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FEA25F53A1D00241D3B /* ListPhotoViewModel.swift */; };
+		F0387FEF25F53A2D00241D3B /* ListPhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FEE25F53A2D00241D3B /* ListPhotosRepository.swift */; };
+		F0387FF325F53A3800241D3B /* ListPhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FF225F53A3800241D3B /* ListPhotosService.swift */; };
+		F0387FF825F53B3E00241D3B /* PinchAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FF725F53B3E00241D3B /* PinchAPIProvider.swift */; };
+		F038800925F53DBD00241D3B /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038800825F53DBD00241D3B /* JSONDecoder+Extension.swift */; };
+		F038800E25F53DBF00241D3B /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038800825F53DBD00241D3B /* JSONDecoder+Extension.swift */; };
+		F038801225F53DD100241D3B /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038801125F53DD100241D3B /* Single+Extension.swift */; };
+		F038801525F53DD300241D3B /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038801125F53DD100241D3B /* Single+Extension.swift */; };
+		F09345A825F06F7C00CE243E /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345A725F06F7C00CE243E /* AlbumResponse.swift */; };
+		F09345AD25F06F8000CE243E /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345A725F06F7C00CE243E /* AlbumResponse.swift */; };
+		F09345B325F0701000CE243E /* PinchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345B225F0701000CE243E /* PinchAPI.swift */; };
+		F09345B425F0701000CE243E /* PinchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345B225F0701000CE243E /* PinchAPI.swift */; };
+		F09345BB25F0706E00CE243E /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345BA25F0706E00CE243E /* PhotoResponse.swift */; };
+		F09345BC25F0706E00CE243E /* PhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345BA25F0706E00CE243E /* PhotoResponse.swift */; };
+		F0CB75B425F546D500BCFB90 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75B325F546D500BCFB90 /* BaseViewModel.swift */; };
+		F0CB75B825F547B700BCFB90 /* HandleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75B725F547B700BCFB90 /* HandleError.swift */; };
+		F0CB75BC25F5482500BCFB90 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75BB25F5482500BCFB90 /* Reachability.swift */; };
+		F0CB75C225F549EB00BCFB90 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75C125F549EB00BCFB90 /* BaseViewController.swift */; };
+		F0CB75C825F555DA00BCFB90 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75C725F555DA00BCFB90 /* AlbumView.swift */; };
+		F0CB75C925F555DA00BCFB90 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75C725F555DA00BCFB90 /* AlbumView.swift */; };
+		F0CB75CD25F55C3400BCFB90 /* PinchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75CC25F55C3400BCFB90 /* PinchView.swift */; };
+		F0CB75CE25F55C3400BCFB90 /* PinchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75CC25F55C3400BCFB90 /* PinchView.swift */; };
+		F0CB75D225F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */; };
+		F0CB75D325F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */; };
+		F0CB75D825F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */; };
+		F0CB75D925F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */; };
+		F0CB75DD25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */; };
+		F0CB75DE25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */; };
+		F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */; };
+		F0CB75E325F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */; };
+		F0CB75F225F5700700BCFB90 /* PinchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */; };
+		F0CB75F325F5700700BCFB90 /* PinchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */; };
+		F0CB760725F5AC4B00BCFB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB760625F5AC4B00BCFB90 /* Main.storyboard */; };
+		F0CB760825F5AC4B00BCFB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB760625F5AC4B00BCFB90 /* Main.storyboard */; };
+		F77A8273CCC41A7728AD68E4 /* Pods_PinchNL_VIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6D421D71E6A0EC073F2102 /* Pods_PinchNL_VIP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		007555AAC045461682B24811 /* Pods-PinchNL-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-MVVM.release.xcconfig"; path = "Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		12507B3E2FD748E2F89C32A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1FB8AE1710688F58CA5D900C /* Pods-PinchNL-VIP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.release.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.release.xcconfig"; sourceTree = "<group>"; };
 		22B372B77A88EA853293524F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		24F3E9F9CDD965C8C5301CE4 /* Pods-PinchNL-MVVM.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-MVVM.test.xcconfig"; path = "Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM.test.xcconfig"; sourceTree = "<group>"; };
 		2A36778843CCFC10646BB0E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31E8A9ECDBD14CED09F83DDA /* PinchNL-MVVM.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "PinchNL-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		598DA9BB9ABACEDD7EBB6F92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		78F00A3C05F5A219D5068BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		830087685FE69B1330BFF3F5 /* Pods_PinchNL_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchNL_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BDB188DD03A08FC7D88CDF6 /* Pods-PinchNL-VIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.debug.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.debug.xcconfig"; sourceTree = "<group>"; };
+		9ECF2F0A2C06FB7FA5D2D6DF /* Pods-PinchNL-VIP.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.test.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.test.xcconfig"; sourceTree = "<group>"; };
 		9F8A516F5C9C085A5B967D54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2DE903592622A364A10F80E /* Pods-PinchNL-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		DB6D421D71E6A0EC073F2102 /* Pods_PinchNL_VIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchNL_VIP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A88F884892E77307829D7A /* PinchNL-VIP.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "PinchNL-VIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9CB4340FD570C5A1509C7C /* Pods-PinchNL-VIP.integ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.integ.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.integ.xcconfig"; sourceTree = "<group>"; };
+		F0387FD225F50F9700241D3B /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		F0387FD625F512B000241D3B /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		F0387FDA25F512BE00241D3B /* AlbumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRepository.swift; sourceTree = "<group>"; };
+		F0387FDE25F512C600241D3B /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		F0387FE425F53A1000241D3B /* ListPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotosViewController.swift; sourceTree = "<group>"; };
+		F0387FEA25F53A1D00241D3B /* ListPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoViewModel.swift; sourceTree = "<group>"; };
+		F0387FEE25F53A2D00241D3B /* ListPhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotosRepository.swift; sourceTree = "<group>"; };
+		F0387FF225F53A3800241D3B /* ListPhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotosService.swift; sourceTree = "<group>"; };
+		F0387FF725F53B3E00241D3B /* PinchAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAPIProvider.swift; sourceTree = "<group>"; };
+		F038800825F53DBD00241D3B /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
+		F038801125F53DD100241D3B /* Single+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+Extension.swift"; sourceTree = "<group>"; };
+		F09345A725F06F7C00CE243E /* AlbumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResponse.swift; sourceTree = "<group>"; };
+		F09345B225F0701000CE243E /* PinchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAPI.swift; sourceTree = "<group>"; };
+		F09345BA25F0706E00CE243E /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
+		F0CB75B325F546D500BCFB90 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		F0CB75B725F547B700BCFB90 /* HandleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleError.swift; sourceTree = "<group>"; };
+		F0CB75BB25F5482500BCFB90 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F0CB75C125F549EB00BCFB90 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F0CB75C725F555DA00BCFB90 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		F0CB75CC25F55C3400BCFB90 /* PinchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchView.swift; sourceTree = "<group>"; };
+		F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchCoordinator.swift; sourceTree = "<group>"; };
+		F0CB760625F5AC4B00BCFB90 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F26F81A86306E3619039A01C /* AlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModels.swift; sourceTree = "<group>"; };
+		FC7ABBF08E60E9243D432E9D /* Pods-PinchNL-MVVM.integ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-MVVM.integ.xcconfig"; path = "Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM.integ.xcconfig"; sourceTree = "<group>"; };
 		FCC056622BD5B4B1009A2F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DAA497706805509D7AD8E78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BC13DD93F4B7A5A9D39C4A4 /* Pods_PinchNL_MVVM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA21C3D97DF6D6D7D6C43A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F77A8273CCC41A7728AD68E4 /* Pods_PinchNL_VIP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		00CD18534ED9DA68A3D60E20 = {
 			isa = PBXGroup;
 			children = (
 				D6AC6F1CD56CAD951925CB54 /* PinchNL-Core */,
-				AF3CC4F1D7E0AE490340F23D /* PinchNL-MVVM */,
+				95F1E9555A78D090DB2D3EE2 /* PinchNL-Models */,
+				0BC03F42BFBE06E7DF36E3BE /* PinchNL-Networking */,
 				97F5B6D7A801A2F2BE9FE58D /* PinchNL-Views */,
+				AF3CC4F1D7E0AE490340F23D /* PinchNL-MVVM */,
 				52F586F1ADE613283F65D7DC /* PinchNL-VIP */,
 				90195602C90BB274F21B0F85 /* Products */,
+				19C6B1D765DC8E5722515EFA /* Pods */,
+				93E4BFD8A6FED8B444703011 /* Frameworks */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
 			tabWidth = 4;
+		};
+		03E4EB82645CDA1D143CCBAD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F09345B925F0705F00CE243E /* Photos */,
+				0F8F301FB58BA1DDDE1151F0 /* Album */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0BC03F42BFBE06E7DF36E3BE /* PinchNL-Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB75C025F549D600BCFB90 /* Connectivity */,
+				F0387FF625F53B3000241D3B /* Providers */,
+				F09345B125F06FFC00CE243E /* Targets */,
+			);
+			path = "PinchNL-Networking";
+			sourceTree = "<group>";
+		};
+		0F8F301FB58BA1DDDE1151F0 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				F09345A725F06F7C00CE243E /* AlbumResponse.swift */,
+				F26F81A86306E3619039A01C /* AlbumModels.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		19C6B1D765DC8E5722515EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2DE903592622A364A10F80E /* Pods-PinchNL-MVVM.debug.xcconfig */,
+				007555AAC045461682B24811 /* Pods-PinchNL-MVVM.release.xcconfig */,
+				FC7ABBF08E60E9243D432E9D /* Pods-PinchNL-MVVM.integ.xcconfig */,
+				24F3E9F9CDD965C8C5301CE4 /* Pods-PinchNL-MVVM.test.xcconfig */,
+				9BDB188DD03A08FC7D88CDF6 /* Pods-PinchNL-VIP.debug.xcconfig */,
+				1FB8AE1710688F58CA5D900C /* Pods-PinchNL-VIP.release.xcconfig */,
+				EA9CB4340FD570C5A1509C7C /* Pods-PinchNL-VIP.integ.xcconfig */,
+				9ECF2F0A2C06FB7FA5D2D6DF /* Pods-PinchNL-VIP.test.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 		52F586F1ADE613283F65D7DC /* PinchNL-VIP */ = {
 			isa = PBXGroup;
@@ -63,9 +203,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		93E4BFD8A6FED8B444703011 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				830087685FE69B1330BFF3F5 /* Pods_PinchNL_MVVM.framework */,
+				DB6D421D71E6A0EC073F2102 /* Pods_PinchNL_VIP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95F1E9555A78D090DB2D3EE2 /* PinchNL-Models */ = {
+			isa = PBXGroup;
+			children = (
+				03E4EB82645CDA1D143CCBAD /* Scenes */,
+			);
+			path = "PinchNL-Models";
+			sourceTree = "<group>";
+		};
 		97F5B6D7A801A2F2BE9FE58D /* PinchNL-Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0CB760B25F5ACA000BCFB90 /* Album */,
+				F0CB75D625F5652C00BCFB90 /* Base */,
 			);
 			path = "PinchNL-Views";
 			sourceTree = "<group>";
@@ -73,6 +232,10 @@
 		AF3CC4F1D7E0AE490340F23D /* PinchNL-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F0CB75F025F56FF600BCFB90 /* Coordinators */,
+				F0CB75BF25F549C500BCFB90 /* Base */,
+				F0387FE325F53A0200241D3B /* ListPhotos */,
+				F0387FE225F539F400241D3B /* Album */,
 			);
 			path = "PinchNL-MVVM";
 			sourceTree = "<group>";
@@ -80,15 +243,116 @@
 		D6AC6F1CD56CAD951925CB54 /* PinchNL-Core */ = {
 			isa = PBXGroup;
 			children = (
+				F038800725F53DA900241D3B /* Extensions */,
 				9F8A516F5C9C085A5B967D54 /* AppDelegate.swift */,
+				F0CB760625F5AC4B00BCFB90 /* Main.storyboard */,
 				FCC056622BD5B4B1009A2F85 /* Assets.xcassets */,
 				12507B3E2FD748E2F89C32A6 /* Info.plist */,
 				49A56BD1F9DA46F2C7ED0F09 /* LaunchScreen.storyboard */,
-				61F1E430E88192C6B7DD787A /* Main.storyboard */,
 				22B372B77A88EA853293524F /* SceneDelegate.swift */,
-				598DA9BB9ABACEDD7EBB6F92 /* ViewController.swift */,
 			);
 			path = "PinchNL-Core";
+			sourceTree = "<group>";
+		};
+		F0387FE225F539F400241D3B /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				F0387FD225F50F9700241D3B /* AlbumViewController.swift */,
+				F0387FD625F512B000241D3B /* AlbumViewModel.swift */,
+				F0387FDA25F512BE00241D3B /* AlbumRepository.swift */,
+				F0387FDE25F512C600241D3B /* AlbumService.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		F0387FE325F53A0200241D3B /* ListPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				F0387FE425F53A1000241D3B /* ListPhotosViewController.swift */,
+				F0387FEA25F53A1D00241D3B /* ListPhotoViewModel.swift */,
+				F0387FEE25F53A2D00241D3B /* ListPhotosRepository.swift */,
+				F0387FF225F53A3800241D3B /* ListPhotosService.swift */,
+			);
+			path = ListPhotos;
+			sourceTree = "<group>";
+		};
+		F0387FF625F53B3000241D3B /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				F0387FF725F53B3E00241D3B /* PinchAPIProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		F038800725F53DA900241D3B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F038800825F53DBD00241D3B /* JSONDecoder+Extension.swift */,
+				F038801125F53DD100241D3B /* Single+Extension.swift */,
+				F0CB75DC25F567D600BCFB90 /* UICollectionView+Extensions.swift */,
+				F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F09345B125F06FFC00CE243E /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				F09345B225F0701000CE243E /* PinchAPI.swift */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		F09345B925F0705F00CE243E /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F09345BA25F0706E00CE243E /* PhotoResponse.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		F0CB75BF25F549C500BCFB90 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB75B325F546D500BCFB90 /* BaseViewModel.swift */,
+				F0CB75B725F547B700BCFB90 /* HandleError.swift */,
+				F0CB75C125F549EB00BCFB90 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F0CB75C025F549D600BCFB90 /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB75BB25F5482500BCFB90 /* Reachability.swift */,
+			);
+			path = Connectivity;
+			sourceTree = "<group>";
+		};
+		F0CB75D625F5652C00BCFB90 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB75CC25F55C3400BCFB90 /* PinchView.swift */,
+				F0CB75D725F5654000BCFB90 /* PinchCollectionViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F0CB75F025F56FF600BCFB90 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F0CB760B25F5ACA000BCFB90 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB75C725F555DA00BCFB90 /* AlbumView.swift */,
+				F0CB75D125F5651500BCFB90 /* AlbumCollectionViewCell.swift */,
+			);
+			path = Album;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,8 +362,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BACA127E75AF3898776CDCDD /* Build configuration list for PBXNativeTarget "PinchNL-VIP" */;
 			buildPhases = (
+				9F03E2CDD69FAC81DC2158CE /* [CP] Check Pods Manifest.lock */,
 				F4EFF16A967500F4EDDA11CA /* Sources */,
 				FD87414F12C0C1FCE14E7131 /* Resources */,
+				CA21C3D97DF6D6D7D6C43A9A /* Frameworks */,
+				92D5A6CDBE063C7B75D68F42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -114,8 +381,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFA71E3514AFD2D908E75256 /* Build configuration list for PBXNativeTarget "PinchNL-MVVM" */;
 			buildPhases = (
+				C574F623F1D382D1DB931873 /* [CP] Check Pods Manifest.lock */,
 				24DBFE580BE6E7D6C51C0DC6 /* Sources */,
 				F169F7115AE3683A4CC93403 /* Resources */,
+				9DAA497706805509D7AD8E78 /* Frameworks */,
+				33ADDD7FE9B2A46E29336182 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,8 +403,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 366EF81A0E48B4C52FE109A9 /* Build configuration list for PBXProject "PinchNL" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -145,6 +413,7 @@
 				en,
 			);
 			mainGroup = 00CD18534ED9DA68A3D60E20;
+			productRefGroup = 90195602C90BB274F21B0F85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -159,9 +428,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CB760725F5AC4B00BCFB90 /* Main.storyboard in Resources */,
 				ADC16844649EF564F4B42243 /* Assets.xcassets in Resources */,
 				BAE3B87F59417ACFE952A595 /* LaunchScreen.storyboard in Resources */,
-				47962008C63FEF15461D6689 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,22 +438,128 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CB760825F5AC4B00BCFB90 /* Main.storyboard in Resources */,
 				C0219B1E0FA3A98020A11292 /* Assets.xcassets in Resources */,
 				95E82D1A3019E86DE71271B7 /* LaunchScreen.storyboard in Resources */,
-				8414314D5CFD8D851908D110 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33ADDD7FE9B2A46E29336182 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PinchNL-MVVM/Pods-PinchNL-MVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92D5A6CDBE063C7B75D68F42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F03E2CDD69FAC81DC2158CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinchNL-VIP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C574F623F1D382D1DB931873 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinchNL-MVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24DBFE580BE6E7D6C51C0DC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0387FD725F512B000241D3B /* AlbumViewModel.swift in Sources */,
+				F0CB75D825F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */,
+				F0CB75C825F555DA00BCFB90 /* AlbumView.swift in Sources */,
+				83113EFDDBC349A19234B32F /* AlbumModels.swift in Sources */,
 				3A3E1BC142A8F169BEC12496 /* AppDelegate.swift in Sources */,
+				F0CB75D225F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */,
+				F0387FDB25F512BE00241D3B /* AlbumRepository.swift in Sources */,
+				F0387FDF25F512C600241D3B /* AlbumService.swift in Sources */,
+				F0387FEB25F53A1D00241D3B /* ListPhotoViewModel.swift in Sources */,
+				F0387FF325F53A3800241D3B /* ListPhotosService.swift in Sources */,
+				F0387FEF25F53A2D00241D3B /* ListPhotosRepository.swift in Sources */,
+				F0387FF825F53B3E00241D3B /* PinchAPIProvider.swift in Sources */,
+				F09345BB25F0706E00CE243E /* PhotoResponse.swift in Sources */,
+				F038800925F53DBD00241D3B /* JSONDecoder+Extension.swift in Sources */,
+				F09345B325F0701000CE243E /* PinchAPI.swift in Sources */,
+				F0387FD325F50F9700241D3B /* AlbumViewController.swift in Sources */,
+				F0CB75C225F549EB00BCFB90 /* BaseViewController.swift in Sources */,
+				F0CB75CD25F55C3400BCFB90 /* PinchView.swift in Sources */,
 				CA0DDD620B8F59CC2F7BB83C /* SceneDelegate.swift in Sources */,
-				ACE72C03888DFC7C70B11F4A /* ViewController.swift in Sources */,
+				F0CB75BC25F5482500BCFB90 /* Reachability.swift in Sources */,
+				F0CB75B825F547B700BCFB90 /* HandleError.swift in Sources */,
+				F0CB75F225F5700700BCFB90 /* PinchCoordinator.swift in Sources */,
+				F0CB75B425F546D500BCFB90 /* BaseViewModel.swift in Sources */,
+				F0387FE525F53A1000241D3B /* ListPhotosViewController.swift in Sources */,
+				F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */,
+				F0CB75DD25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */,
+				F09345A825F06F7C00CE243E /* AlbumResponse.swift in Sources */,
+				F038801225F53DD100241D3B /* Single+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,9 +567,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CB75E325F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */,
+				F0CB75DE25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */,
+				F0CB75D325F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */,
+				F0CB75D925F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */,
+				2FE761C8425A1ACAD84508D7 /* AlbumModels.swift in Sources */,
 				052EC7D6954955A12147F5E1 /* AppDelegate.swift in Sources */,
+				F09345BC25F0706E00CE243E /* PhotoResponse.swift in Sources */,
+				F0CB75F325F5700700BCFB90 /* PinchCoordinator.swift in Sources */,
+				F09345B425F0701000CE243E /* PinchAPI.swift in Sources */,
+				F0CB75CE25F55C3400BCFB90 /* PinchView.swift in Sources */,
 				8F856A50AA03EA4A24790ECF /* SceneDelegate.swift in Sources */,
-				EB38A82F5662423706758FDC /* ViewController.swift in Sources */,
+				F09345AD25F06F8000CE243E /* AlbumResponse.swift in Sources */,
+				F038800E25F53DBF00241D3B /* JSONDecoder+Extension.swift in Sources */,
+				F0CB75C925F555DA00BCFB90 /* AlbumView.swift in Sources */,
+				F038801525F53DD300241D3B /* Single+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,19 +596,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		61F1E430E88192C6B7DD787A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				78F00A3C05F5A219D5068BF7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		026AB67F7C7CA29903461C52 /* test */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ECF2F0A2C06FB7FA5D2D6DF /* Pods-PinchNL-VIP.test.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -301,6 +681,7 @@
 		};
 		376710E2162BCA84DD1AE7DF /* integ */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA9CB4340FD570C5A1509C7C /* Pods-PinchNL-VIP.integ.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -318,6 +699,7 @@
 		};
 		458496CA85CAD1A9CE3B298A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BDB188DD03A08FC7D88CDF6 /* Pods-PinchNL-VIP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -335,6 +717,7 @@
 		};
 		52D7DA13DDBF8EDE9D449D55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB8AE1710688F58CA5D900C /* Pods-PinchNL-VIP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -352,6 +735,7 @@
 		};
 		56B7028B3013EE9DE4EDF8BF /* test */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24F3E9F9CDD965C8C5301CE4 /* Pods-PinchNL-MVVM.test.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -369,6 +753,7 @@
 		};
 		5B3DF58DF2AE31DCDB238F28 /* integ */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC7ABBF08E60E9243D432E9D /* Pods-PinchNL-MVVM.integ.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -441,6 +826,7 @@
 		};
 		82BAB7EE745CDCF19647F8D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007555AAC045461682B24811 /* Pods-PinchNL-MVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -582,6 +968,7 @@
 		};
 		AE7675957F977C853252D4EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2DE903592622A364A10F80E /* Pods-PinchNL-MVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

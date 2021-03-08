@@ -18,6 +18,8 @@ targets:
             - path: PinchNL-MVVM
             - path: PinchNL-Core
             - path: PinchNL-Views
+            - path: PinchNL-Networking
+            - path: PinchNL-Models
 
     PinchNL-VIP:
         type: application
@@ -27,6 +29,9 @@ targets:
             - path: PinchNL-VIP
             - path: PinchNL-Core
             - path: PinchNL-Views
+            - path: PinchNL-Networking
+            - path: PinchNL-Models
+
 #    PinchNL-MVVMTests:
 #    type: bundle.unit-test
 #    platform: iOS

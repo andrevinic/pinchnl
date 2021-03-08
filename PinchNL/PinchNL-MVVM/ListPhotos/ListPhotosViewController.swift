@@ -1,19 +1,17 @@
 //
-//  ViewController.swift
-//  PinchNL
+//  ListPhotosViewController.swift
+//  PinchNL-MVVM
 //
-//  Created by Andre Nogueira on 03/03/21.
+//  Created by Andre Nogueira on 07/03/21.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ListPhotosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-
