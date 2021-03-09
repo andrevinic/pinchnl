@@ -13,4 +13,18 @@ struct PhotoResponse: Codable {
     let title: String
     let url: String
     let thumbnailUrl: String
+    
+    init(
+        albumId: Int,
+        id: Int,
+        title: String,
+        url: String,
+        thumbnailUrl: String
+    ) {
+        self.albumId = albumId
+        self.id = id
+        self.title = title
+        self.url = url
+        self.thumbnailUrl = thumbnailUrl
+    }
 }

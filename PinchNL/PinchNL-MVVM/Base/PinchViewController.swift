@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class BaseViewController: UIViewController {
+class PinchViewController: UIViewController {
     
     internal var baseViewModel: BaseViewModelContract? {
         return nil

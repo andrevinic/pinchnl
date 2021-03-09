@@ -9,15 +9,24 @@ import RxSwift
 import RxCocoa
 
 protocol AlbumViewModelContract {
-    var albums:Driver<[AlbumModels.ViewModel]> { get set }
+    var albums:Driver<[AlbumModels.ViewModel]> { get }
+    var refresh: Driver<()> { get set }
+
     func requestAlbum(page: Int)
+    func refreshAlbum(page: Int)
 }
 class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
     
     private var _albums = PublishSubject<[AlbumModels.ViewModel]>()
-    lazy var albums:Driver<[AlbumModels.ViewModel]> = {
+     var albums:Driver<[AlbumModels.ViewModel]> {
         _albums.asDriver(onErrorJustReturn: [])
+    }
+    
+    private lazy var _refresh = PublishSubject<()>()
+    lazy var refresh: Driver<()> = {
+        _refresh.asDriver(onErrorJustReturn: ())
     }()
+    
     private var albumModels: [AlbumModels.ViewModel] = []
     
     private let repository: AlbumRepositoryContract
@@ -31,8 +40,14 @@ class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
             .requestAlbum(page: page)
             .subscribe(onSuccess: { [unowned self] (response) in
                 self._albums.onNext(self.makeAlbumListModel(response))
+                self._refresh.onNext(())
             }, onError: self.handleError(error:))
             .disposed(by: self.disposeBag)
+    }
+    
+    func refreshAlbum(page: Int) {
+        self.albumModels.removeAll()
+        requestAlbum(page: page)
     }
     
     private func makeAlbumListModel(_ response: [AlbumResponse]) -> [AlbumModels.ViewModel] {

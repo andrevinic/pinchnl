@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let navigation = UINavigationController()
         let coordinator = PinchCoordinator(navigationController: navigation)
-        coordinator.start()
+        coordinator.startAlbum()
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()

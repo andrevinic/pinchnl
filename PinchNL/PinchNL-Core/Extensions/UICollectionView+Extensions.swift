@@ -23,16 +23,6 @@ public extension UICollectionView {
                                                       for indexPath: IndexPath) -> T {
         return dequeueReusableCell(withReuseIdentifier: type.className, for: indexPath) as! T
     }
-
-    // swiftlint:disable force_cast
-    func dequeueReusableView<T: UICollectionReusableView>(with type: T.Type,
-                                                          for indexPath: IndexPath,
-                                                          ofKind kind: String =
-        UICollectionView.elementKindSectionHeader) -> T {
-        return dequeueReusableSupplementaryView(ofKind: kind,
-                                                withReuseIdentifier: type.className,
-                                                for: indexPath) as! T
-    }
     
     func addLoading(loadingView: UIView, marginLeft: CGFloat = 0) {
         self.addSubview(loadingView)
@@ -42,13 +32,5 @@ public extension UICollectionView {
             loadingView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             loadingView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: marginLeft)
         ])
-    }
-}
-
-extension Collection {
-
-    /// Returns the element at the specified index if it is within bounds, otherwise nil.
-    subscript (safe index: Index) -> Element? {
-        return indices.contains(index) ? self[index] : nil
     }
 }
