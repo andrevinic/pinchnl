@@ -97,4 +97,5 @@ extension AlbumViewController: UICollectionViewDelegateFlowLayout {
             requestAlbum()
         }
     }
+
 }
