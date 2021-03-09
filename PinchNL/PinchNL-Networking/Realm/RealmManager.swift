@@ -11,7 +11,10 @@ import RealmSwift
 protocol RealmManagerContract {
     func storeAlbumModels(response: [AlbumResponse], page: Int)
     func getAlbumModels(page: Int) -> [AlbumResponse]
+    func storePhotosModels(response: [PhotoResponse])
+    func getPhotosModels(requestService: PhotosModels.RequestService.Photos) -> [PhotoResponse]
 }
+
 class RealmManager: RealmManagerContract {
     
     private lazy var realm: Realm = {
@@ -35,6 +38,20 @@ class RealmManager: RealmManagerContract {
         }
     }
     
+    func storePhotosModels(response: [PhotoResponse]) {
+        response.forEach { [weak self] in
+            let photoObject = PhotoRealmObject()
+            photoObject.setup(
+                title: $0.title,
+                id: $0.id,
+                albumId: $0.albumId
+            )
+            try! realm.write { [weak self] in
+                self?.realm.add(photoObject, update: .all)
+            }
+        }
+    }
+    
     func getAlbumModels(page: Int) -> [AlbumResponse] {
         var albumList:[AlbumResponse] = []
         let albumObjects = self.realm.objects(AlbumRealmObject.self)
@@ -49,5 +66,25 @@ class RealmManager: RealmManagerContract {
         }
         return albumList
     }
-
+    
+    func getPhotosModels(requestService: PhotosModels.RequestService.Photos) -> [PhotoResponse] {
+        var photoList:[PhotoResponse] = []
+        let photosObjects = self.realm
+            .objects(PhotoRealmObject.self)
+            .filter("albumId == \(requestService.albumId)")
+        
+        photosObjects.forEach {
+            
+            let model = PhotoResponse(
+                albumId: $0.albumId,
+                id: $0.id,
+                title: $0.title,
+                url: "",
+                thumbnailUrl: ""
+            )
+            photoList.append(model)
+        }
+        
+        return photoList
+    }
 }

@@ -15,7 +15,7 @@ class AlbumRealmObject: Object {
     @objc dynamic var userId = 0
     @objc dynamic var page = 0
     @objc dynamic var compoundKey = ""
-
+    
     func setup(title: String, albumId: Int, userId: Int, page: Int) {
         self.title = title
         self.albumId = albumId
@@ -23,8 +23,9 @@ class AlbumRealmObject: Object {
         self.page = page
         self.compoundKey = compoundKeyValue()
     }
+    
     override class func primaryKey() -> String? {
-        return "compoundKey"
+        return "albumId"
     }
     
     func compoundKeyValue() -> String {

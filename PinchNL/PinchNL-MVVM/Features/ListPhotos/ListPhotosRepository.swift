@@ -27,10 +27,14 @@ class ListPhotosRepository: ListPhotosRepositoryContract {
     func fetchPhotos(requestService: PhotosModels.RequestService.Photos) -> Single<[PhotoResponse]> {
         if Reachability.isConnectedToNetwork() {
             return service.photos(request: requestService)
+                .do (
+                    onSuccess: { [weak self] (response) in
+                        self?.realmManager
+                            .storePhotosModels(response: response)
+                    })
         } else {
-            return service.photos(request: requestService)
+            return Single.just(realmManager.getPhotosModels(requestService: requestService))
         }
-        
         
     }
     
