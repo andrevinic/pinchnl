@@ -13,7 +13,7 @@ class AlbumViewController: PinchViewController {
     // MARK: - Properties
     private var page = 1
     private var choosedAlbum: AlbumModels.ViewModel?
-    
+
     // MARK: - ViewModel
     private let viewModel: AlbumViewModelContract
     
@@ -78,10 +78,16 @@ class AlbumViewController: PinchViewController {
 
 extension AlbumViewController: AlbumViewDelegate {
     
+    func didTapRefresh() {
+        self.viewModel.refreshAlbum(page: page)
+        self._view.endRefreshing()
+    }
+    
     func didTapAlbum() {
         guard let model = choosedAlbum else { return }
         self.coordinator.startPhotos(model: model, page: page)
     }
+    
 }
 
 extension AlbumViewController: UICollectionViewDelegateFlowLayout {

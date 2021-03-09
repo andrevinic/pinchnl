@@ -11,6 +11,7 @@ import RxCocoa
 protocol AlbumViewModelContract {
     var albums:Driver<[AlbumModels.ViewModel]> { get set }
     func requestAlbum(page: Int)
+    func refreshAlbum(page: Int)
 }
 class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
     
@@ -33,6 +34,11 @@ class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
                 self._albums.onNext(self.makeAlbumListModel(response))
             }, onError: self.handleError(error:))
             .disposed(by: self.disposeBag)
+    }
+    
+    func refreshAlbum(page: Int) {
+        self.albumModels.removeAll()
+        requestAlbum(page: page)
     }
     
     private func makeAlbumListModel(_ response: [AlbumResponse]) -> [AlbumModels.ViewModel] {
