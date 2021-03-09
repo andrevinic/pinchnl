@@ -34,6 +34,7 @@ class AlbumViewController: PinchViewController {
     }
     
     // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
@@ -68,6 +69,14 @@ class AlbumViewController: PinchViewController {
                     self?.didTapAlbum()
                 }
             ).disposed(by: self.disposeBag)
+        
+        self.viewModel
+            .refresh
+            .asObservable()
+            .subscribe(onNext: { (_) in
+                self._view.endRefreshing()
+            })
+            .disposed(by: disposeBag)
     }
     
     private func requestAlbum() {
@@ -80,7 +89,6 @@ extension AlbumViewController: AlbumViewDelegate {
     
     func didTapRefresh() {
         self.viewModel.refreshAlbum(page: page)
-        self._view.endRefreshing()
     }
     
     func didTapAlbum() {

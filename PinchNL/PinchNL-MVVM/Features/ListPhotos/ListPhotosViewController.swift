@@ -64,6 +64,14 @@ class ListPhotosViewController: PinchViewController {
                     self?.didTapPhoto()
                 }
             ).disposed(by: self.disposeBag)
+        
+        self.viewModel
+            .refresh
+            .asObservable()
+            .subscribe(onNext: { (_) in
+                self._view.endRefreshing()
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -72,6 +80,10 @@ extension ListPhotosViewController: PhotosViewDelegate {
     func didTapPhoto() {
         guard let model = choosedPhoto else { return }
         self.coordinator.startPhotoDetail(model: model)
+    }
+    
+    func didTapRefresh() {
+        self.viewModel.refreshPhotosList()
     }
     
 }

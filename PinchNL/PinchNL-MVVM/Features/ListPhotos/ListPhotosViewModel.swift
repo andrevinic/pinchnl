@@ -10,7 +10,9 @@ import RxCocoa
 
 protocol ListPhotosViewModelContract {
     var photos: Driver<[PhotosModels.ViewModel]> { get set }
+    var refresh: Driver<()> { get set }
     func fetchListPhotos()
+    func refreshPhotosList()
 }
 
 class ListPhotosViewModel: BaseViewModel, ListPhotosViewModelContract {
@@ -21,6 +23,11 @@ class ListPhotosViewModel: BaseViewModel, ListPhotosViewModelContract {
     private lazy var _photos = PublishSubject<[PhotosModels.ViewModel]>()
     lazy var photos: Driver<[PhotosModels.ViewModel]> = {
         _photos.asDriver(onErrorJustReturn: [])
+    }()
+    
+    private lazy var _refresh = PublishSubject<()>()
+    lazy var refresh: Driver<()> = {
+        _refresh.asDriver(onErrorJustReturn: ())
     }()
     
     private var photosList: [PhotosModels.ViewModel] = []
@@ -38,8 +45,14 @@ class ListPhotosViewModel: BaseViewModel, ListPhotosViewModelContract {
             .fetchPhotos(requestService: requestService)
             .subscribe(onSuccess: { [unowned self] (result) in
                 self._photos.onNext(self.makePhotosModels(response: result))
+                self._refresh.onNext(())
             }, onError: self.handleError(error:))
             .disposed(by: self.disposeBag)
+    }
+    
+    func refreshPhotosList() {
+        photosList.removeAll()
+        fetchListPhotos()
     }
     
     private func makePhotosModels(response: [PhotoResponse]) -> [PhotosModels.ViewModel] {

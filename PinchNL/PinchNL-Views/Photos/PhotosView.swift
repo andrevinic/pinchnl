@@ -9,12 +9,14 @@ import UIKit
 
 protocol PhotosViewDelegate: UICollectionViewDelegate {
     func didTapPhoto()
+    func didTapRefresh()
 }
 
 protocol PhotosViewConfiguration: UIView {
     var collectionView: UICollectionView { get set }
     var delegate: PhotosViewDelegate? { get set }
     func configureView()
+    func endRefreshing()
 }
 
 class PhotosView: PinchView, PhotosViewConfiguration {
@@ -29,12 +31,18 @@ class PhotosView: PinchView, PhotosViewConfiguration {
         }
     }
     
+    private lazy var refreshControl: UIRefreshControl = {
+        let refresh = UIRefreshControl()
+        return refresh
+    }()
+    
     lazy var collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.backgroundColor = .white
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.refreshControl = self.refreshControl
         return collectionView
     }()
     
@@ -45,6 +53,8 @@ class PhotosView: PinchView, PhotosViewConfiguration {
     override func setupConfigurations() {
         backgroundColor = UIColor.white
         collectionView.register(cellType: PhotosCollectionViewCell.self)
+        refreshControl.addTarget(self, action: #selector(tappedRefresh), for: .valueChanged)
+
     }
     
     override func setupConstraints() {
@@ -54,5 +64,14 @@ class PhotosView: PinchView, PhotosViewConfiguration {
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+    
+    @objc
+    private func tappedRefresh() {
+        delegate?.didTapRefresh()
+    }
+    
+    func endRefreshing() {
+        self.refreshControl.endRefreshing()
     }
 }
