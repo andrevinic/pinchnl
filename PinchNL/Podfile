@@ -8,6 +8,7 @@ target 'PinchNL-MVVM' do
   pod 'RxCocoa'
   pod 'Moya/RxSwift'
   pod 'Kingfisher', '~> 6.0'
+  pod 'RealmSwift'
   # Pods for PinchNL-MVVM
 
 end

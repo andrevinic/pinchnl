@@ -31,6 +31,12 @@
 		F038800E25F53DBF00241D3B /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038800825F53DBD00241D3B /* JSONDecoder+Extension.swift */; };
 		F038801225F53DD100241D3B /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038801125F53DD100241D3B /* Single+Extension.swift */; };
 		F038801525F53DD300241D3B /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038801125F53DD100241D3B /* Single+Extension.swift */; };
+		F0524C2625F7037400713385 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C2525F7037400713385 /* RealmManager.swift */; };
+		F0524C2B25F7037700713385 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C2525F7037400713385 /* RealmManager.swift */; };
+		F0524C3D25F707F400713385 /* AlbumRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C3C25F707F400713385 /* AlbumRealmObject.swift */; };
+		F0524C3E25F707F400713385 /* AlbumRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C3C25F707F400713385 /* AlbumRealmObject.swift */; };
+		F0524C4225F7085700713385 /* PhotoRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C4125F7085700713385 /* PhotoRealmObject.swift */; };
+		F0524C4325F7085700713385 /* PhotoRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C4125F7085700713385 /* PhotoRealmObject.swift */; };
 		F09345A825F06F7C00CE243E /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345A725F06F7C00CE243E /* AlbumResponse.swift */; };
 		F09345AD25F06F8000CE243E /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345A725F06F7C00CE243E /* AlbumResponse.swift */; };
 		F09345B325F0701000CE243E /* PinchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345B225F0701000CE243E /* PinchAPI.swift */; };
@@ -99,6 +105,9 @@
 		F0387FF725F53B3E00241D3B /* PinchAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAPIProvider.swift; sourceTree = "<group>"; };
 		F038800825F53DBD00241D3B /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
 		F038801125F53DD100241D3B /* Single+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+Extension.swift"; sourceTree = "<group>"; };
+		F0524C2525F7037400713385 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		F0524C3C25F707F400713385 /* AlbumRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRealmObject.swift; sourceTree = "<group>"; };
+		F0524C4125F7085700713385 /* PhotoRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRealmObject.swift; sourceTree = "<group>"; };
 		F09345A725F06F7C00CE243E /* AlbumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResponse.swift; sourceTree = "<group>"; };
 		F09345B225F0701000CE243E /* PinchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAPI.swift; sourceTree = "<group>"; };
 		F09345BA25F0706E00CE243E /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
@@ -175,6 +184,7 @@
 		0BC03F42BFBE06E7DF36E3BE /* PinchNL-Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F0524C2425F7036700713385 /* Realm */,
 				F0CB75C025F549D600BCFB90 /* Connectivity */,
 				F0387FF625F53B3000241D3B /* Providers */,
 				F09345B125F06FFC00CE243E /* Targets */,
@@ -314,6 +324,24 @@
 				F0AD84AA25F6D434004843C4 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F0524C2425F7036700713385 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				F0524C3B25F707B000713385 /* Objects */,
+				F0524C2525F7037400713385 /* RealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		F0524C3B25F707B000713385 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F0524C3C25F707F400713385 /* AlbumRealmObject.swift */,
+				F0524C4125F7085700713385 /* PhotoRealmObject.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		F09345B125F06FFC00CE243E /* Targets */ = {
@@ -595,6 +623,7 @@
 				F0F9338725F6C229008BED1C /* PhotosCollectionViewCell.swift in Sources */,
 				F0CB75C825F555DA00BCFB90 /* AlbumView.swift in Sources */,
 				83113EFDDBC349A19234B32F /* AlbumModels.swift in Sources */,
+				F0524C2625F7037400713385 /* RealmManager.swift in Sources */,
 				3A3E1BC142A8F169BEC12496 /* AppDelegate.swift in Sources */,
 				F0CB75D225F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */,
 				F0387FDB25F512BE00241D3B /* AlbumRepository.swift in Sources */,
@@ -624,7 +653,9 @@
 				F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */,
 				F0CB75DD25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */,
 				F09345A825F06F7C00CE243E /* AlbumResponse.swift in Sources */,
+				F0524C4225F7085700713385 /* PhotoRealmObject.swift in Sources */,
 				F038801225F53DD100241D3B /* Single+Extension.swift in Sources */,
+				F0524C3D25F707F400713385 /* AlbumRealmObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +668,9 @@
 				F0CB75D325F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */,
 				F0CB75D925F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */,
 				2FE761C8425A1ACAD84508D7 /* AlbumModels.swift in Sources */,
+				F0524C2B25F7037700713385 /* RealmManager.swift in Sources */,
 				F0AD84AC25F6D434004843C4 /* UIImageView+Extensions.swift in Sources */,
+				F0524C4325F7085700713385 /* PhotoRealmObject.swift in Sources */,
 				052EC7D6954955A12147F5E1 /* AppDelegate.swift in Sources */,
 				F09345BC25F0706E00CE243E /* PhotoResponse.swift in Sources */,
 				F0AD84C925F6DEB1004843C4 /* PhotoDetailView.swift in Sources */,
@@ -651,6 +684,7 @@
 				F0CB75C925F555DA00BCFB90 /* AlbumView.swift in Sources */,
 				F0F9337725F655B1008BED1C /* PhotosModels.swift in Sources */,
 				F038801525F53DD300241D3B /* Single+Extension.swift in Sources */,
+				F0524C3E25F707F400713385 /* AlbumRealmObject.swift in Sources */,
 				F0F9338125F67314008BED1C /* PhotosView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

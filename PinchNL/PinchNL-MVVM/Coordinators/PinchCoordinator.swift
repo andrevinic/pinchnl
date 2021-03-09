@@ -25,7 +25,11 @@ class PinchCoordinator: Coordinator {
     func startAlbum() {
         let provider = PinchAPIProvider<PinchAPI>()
         let service = AlbumService(apiProvider: provider)
-        let repository = AlbumRepository(service: service)
+        let realm = RealmManager()
+        let repository = AlbumRepository(
+            service: service,
+            realmManager: realm
+        )
         let viewModel = AlbumViewModel(repository: repository)
         let view = AlbumView()
         let viewController = AlbumViewController(
@@ -39,7 +43,12 @@ class PinchCoordinator: Coordinator {
     func startPhotos(model: AlbumModels.ViewModel, page: Int) {
         let provider = PinchAPIProvider<PinchAPI>()
         let service = ListPhotosService(provider: provider)
-        let repository = ListPhotosRepository(service: service)
+        let realmManager = RealmManager()
+        let repository = ListPhotosRepository(
+            service: service,
+            realmManager: realmManager
+        )
+        
         let requestService = PhotosModels.RequestService.Photos(
             page: page,
             albumId: Int(model.id) ?? 0

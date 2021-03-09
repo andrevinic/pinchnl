@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 
 protocol AlbumViewModelContract {
-    var albums:Driver<[AlbumModels.ViewModel]> { get set }
+    var albums:Driver<[AlbumModels.ViewModel]> { get }
     var refresh: Driver<()> { get set }
 
     func requestAlbum(page: Int)
@@ -18,9 +18,9 @@ protocol AlbumViewModelContract {
 class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
     
     private var _albums = PublishSubject<[AlbumModels.ViewModel]>()
-    lazy var albums:Driver<[AlbumModels.ViewModel]> = {
+     var albums:Driver<[AlbumModels.ViewModel]> {
         _albums.asDriver(onErrorJustReturn: [])
-    }()
+    }
     
     private lazy var _refresh = PublishSubject<()>()
     lazy var refresh: Driver<()> = {

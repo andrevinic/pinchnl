@@ -12,15 +12,31 @@ protocol AlbumRepositoryContract {
 }
 class AlbumRepository: AlbumRepositoryContract {
     
-    let service: AlbumServiceContract
+    private let service: AlbumServiceContract
+    private let realmManager: RealmManagerContract
     
-    // TODO: - ADD persistance manager
-    
-    init(service: AlbumServiceContract) {
+    init(
+        service: AlbumServiceContract,
+        realmManager: RealmManagerContract
+    ) {
         self.service = service
+        self.realmManager = realmManager
     }
     
     func requestAlbum(page: Int) -> Single<[AlbumResponse]> {
-        return service.fetch(page: page)
+        if Reachability.isConnectedToNetwork() {
+            return service.fetch(page: page)
+                .do (
+                    onSuccess: { [weak self] (response) in
+                        self?.realmManager.storeAlbumModels(
+                            response: response,
+                            page: page
+                        )
+                    })
+        } else {
+            return Single.just(
+                realmManager.getAlbumModels(page: page)
+            )
+        }
     }
 }

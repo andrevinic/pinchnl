@@ -14,13 +14,24 @@ protocol ListPhotosRepositoryContract {
 class ListPhotosRepository: ListPhotosRepositoryContract {
     
     private let service: ListPhotosServiceContract
+    private let realmManager: RealmManagerContract
     
-    init(service: ListPhotosServiceContract) {
+    init(
+        service: ListPhotosServiceContract,
+        realmManager: RealmManagerContract
+    ) {
         self.service = service
+        self.realmManager = realmManager
     }
     
     func fetchPhotos(requestService: PhotosModels.RequestService.Photos) -> Single<[PhotoResponse]> {
-        return service.photos(request: requestService)
+        if Reachability.isConnectedToNetwork() {
+            return service.photos(request: requestService)
+        } else {
+            return service.photos(request: requestService)
+        }
+        
+        
     }
     
 }
