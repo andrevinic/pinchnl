@@ -32,42 +32,14 @@ targets:
             - path: PinchNL-Networking
             - path: PinchNL-Models
 
-#    PinchNL-MVVMTests:
-#    type: bundle.unit-test
-#    platform: iOS
-#    deploymentTarget: "13.0"
-#    sources:
-#        - path: PinchNL-MVVMTests
-#    dependencies:
-#        - target: PinchNL-MVVM
-#    scheme:
-#        testTargets:
-#        - PinchNL-MVVM
-#        - PinchNL-MVVMTests
-#        gatherCoverageData: true
-
-
 schemes:
     PinchNL-MVVM:
         build:
             targets:
                 PinchNL-MVVM: all
-                # {Project Name}Tests: [test] # デフォルト？
-                # {Project Name}UITests: [test] # デフォルト？
+             
         run:
         config: Debug
-        # test:
-        #   config: Debug
-        #   gatherCoverageData: true
-        #   coverageTargets:
-        #     - {Project Name}
-        #   targets:
-        #     - name: {Project Name}Tests
-        #       parallelizable: true
-        #       randomExecutionOrder: true
-        #     - name: {Project Name}UITests
-        #       parallelizable: true
-        #       randomExecutionOrder: true
         profile:
         config: Release
         analyze:
@@ -79,22 +51,9 @@ schemes:
         build:
             targets:
                 PinchNL-VIP: all
-                # {Project Name}Tests: [test] # デフォルト？
-                # {Project Name}UITests: [test] # デフォルト？
+               
         run:
         config: Debug
-        # test:
-        #   config: Debug
-        #   gatherCoverageData: true
-        #   coverageTargets:
-        #     - {Project Name}
-        #   targets:
-        #     - name: {Project Name}Tests
-        #       parallelizable: true
-        #       randomExecutionOrder: true
-        #     - name: {Project Name}UITests
-        #       parallelizable: true
-        #       randomExecutionOrder: true
         profile:
         config: Release
         analyze:
