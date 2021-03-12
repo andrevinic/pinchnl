@@ -56,7 +56,7 @@ class PinchAlbumInteractor: PinchAlbumBusinessLogic, PinchAlbumDataStore {
                         })
                 )
             case .failure(let error):
-                break
+                self?.presenter.presentAlbumError(response: AlbumModels.AlbumError(error: error))
             }
         }
     }
@@ -69,7 +69,7 @@ class PinchAlbumInteractor: PinchAlbumBusinessLogic, PinchAlbumDataStore {
                 self?.photoData = photoData
                 self?.presenter.presentPhotos()
             case .failure(let error):
-                break
+                self?.presenter.presentPhotosError(response: PhotosModels.PhotosError(error: error))
             }
         }
     }

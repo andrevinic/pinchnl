@@ -42,20 +42,22 @@ class PinchAlbumViewController: BaseViewController, PinchAlbumDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = _view
+        self.title = "Albums"
         _view.delegate = self
         _view.collectionView.dataSource = self
         requestAlbum()
     }
     
-    // MARK: Do something
+    // MARK: Request Album
     
     func requestAlbum() {
         interactor?.requestAlbum(page: page)
     }
     
     func displayAlbum(viewModel: AlbumModels.ViewModel) {
-        self.albumList = viewModel.albumList
+        self.albumList.append(contentsOf:viewModel.albumList)
         _view.reloadData()
+        _view.endRefreshing()
         self.page += 1
     }
     
@@ -108,6 +110,5 @@ extension PinchAlbumViewController: AlbumViewDelegate {
     func didTapRefresh() {
         self.requestAlbum()
     }
-    
     
 }

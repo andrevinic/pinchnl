@@ -14,14 +14,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let navigation = UINavigationController()
-        /// MVVM:
+        /** INSTRUCTIONS:
+                
+                IF YOU CHOOSE MVVM TARGET,
+                COMMENT VIP START/END
+                
+                IF YOU CHOOSE VIP TARGET, COMMENT MVVM START/END
+         */
+        /// MVVM START:
             let coordinator = PinchCoordinator(navigationController: navigation)
             coordinator.startAlbum()
-        /// VIP:
+        /// MVVM END
+        
+        /// VIP START:
 //        let factory = PinchAlbumFactory()
 //        let viewController = factory.setup()
 //        navigation.pushViewController(viewController, animated: true)
-        
+        /// VIP END
+
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()

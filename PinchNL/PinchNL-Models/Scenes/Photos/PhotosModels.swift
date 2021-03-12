@@ -41,4 +41,7 @@ enum PhotosModels {
        
     }
     
+    struct PhotosError {
+        let error: Error
+    }
 }

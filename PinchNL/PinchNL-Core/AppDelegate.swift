@@ -15,13 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if #available(iOS 13, *) {} else {
             let navigation = UINavigationController()
-            /// MVVM:
+            
+            /** INSTRUCTIONS:
+                    
+                    IF YOU CHOOSE MVVM TARGET,
+                    COMMENT VIP START/END
+                    
+                    IF YOU CHOOSE VIP TARGET, COMMENT MVVM START/END
+             */
+            /// MVVM START:
             let coordinator = PinchCoordinator(navigationController: navigation)
             coordinator.startAlbum()
-            /// VIP:
+            /// MVVM END
+            
+            /// VIP START:
 //            let factory = PinchAlbumFactory()
 //            let viewController = factory.setup()
 //            navigation.pushViewController(viewController, animated: true)
+            /// VIP END
+            
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.rootViewController = navigation
             window?.makeKeyAndVisible()

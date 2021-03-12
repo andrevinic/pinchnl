@@ -8,22 +8,17 @@
 import UIKit
 
 protocol PhotosViewDelegate: UICollectionViewDelegate {
-    func didTapPhoto()
     func didTapRefresh()
+    func didTapPhoto()
 }
 
 protocol PhotosViewConfiguration: UIView {
     var collectionView: UICollectionView { get set }
     var delegate: PhotosViewDelegate? { get set }
-    func configureView()
     func endRefreshing()
 }
 
 class PhotosView: PinchView, PhotosViewConfiguration {
-    
-    func configureView() {
-        
-    }
     
     weak var delegate: PhotosViewDelegate? {
         didSet {
