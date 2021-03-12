@@ -15,20 +15,30 @@ enum PhotosModels {
             let albumId: Int
         }
     }
-  
-    struct Request {
-        
+    
+    struct Response {
+        let list: [(title: String, url: String, thumbnailUrl: String)]
     }
     
     struct ViewModel {
+        var list: [(title: String, url: String, thumbnailUrl: String)]
+    }
+    
+    struct ViewData {
         let title: String
         let url: String
         let thumbnailUrl: String
     }
     
-    
     struct PhotosData {
+        let data: [Data]
         
+        struct Data {
+            let title: String
+            let url: String
+            let thumbnailUrl: String
+        }
+       
     }
     
 }

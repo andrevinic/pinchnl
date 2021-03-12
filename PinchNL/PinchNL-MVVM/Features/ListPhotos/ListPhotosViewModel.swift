@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 
 protocol ListPhotosViewModelContract {
-    var photos: Driver<[PhotosModels.ViewModel]> { get set }
+    var photos: Driver<[PhotosModels.ViewData]> { get set }
     var refresh: Driver<()> { get set }
     func fetchListPhotos()
     func refreshPhotosList()
@@ -20,8 +20,8 @@ class ListPhotosViewModel: BaseViewModel, ListPhotosViewModelContract {
     private let repository: ListPhotosRepositoryContract
     private let requestService: PhotosModels.RequestService.Photos
     
-    private lazy var _photos = PublishSubject<[PhotosModels.ViewModel]>()
-    lazy var photos: Driver<[PhotosModels.ViewModel]> = {
+    private lazy var _photos = PublishSubject<[PhotosModels.ViewData]>()
+    lazy var photos: Driver<[PhotosModels.ViewData]> = {
         _photos.asDriver(onErrorJustReturn: [])
     }()
     
@@ -30,7 +30,7 @@ class ListPhotosViewModel: BaseViewModel, ListPhotosViewModelContract {
         _refresh.asDriver(onErrorJustReturn: ())
     }()
     
-    private var photosList: [PhotosModels.ViewModel] = []
+    private var photosList: [PhotosModels.ViewData] = []
     
     init(
         repository: ListPhotosRepositoryContract,
@@ -55,9 +55,9 @@ class ListPhotosViewModel: BaseViewModel, ListPhotosViewModelContract {
         fetchListPhotos()
     }
     
-    private func makePhotosModels(response: [PhotoResponse]) -> [PhotosModels.ViewModel] {
+    private func makePhotosModels(response: [PhotoResponse]) -> [PhotosModels.ViewData] {
         response.forEach { [weak self] in
-            let model = PhotosModels.ViewModel(
+            let model = PhotosModels.ViewData(
                 title: $0.title,
                 url: $0.url,
                 thumbnailUrl: $0.thumbnailUrl

@@ -18,6 +18,13 @@
 		BAE3B87F59417ACFE952A595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A56BD1F9DA46F2C7ED0F09 /* LaunchScreen.storyboard */; };
 		C0219B1E0FA3A98020A11292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC056622BD5B4B1009A2F85 /* Assets.xcassets */; };
 		CA0DDD620B8F59CC2F7BB83C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B372B77A88EA853293524F /* SceneDelegate.swift */; };
+		F004E8DC25FACFA90000C5EC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75BB25F5482500BCFB90 /* Reachability.swift */; };
+		F004E8E625FAFC170000C5EC /* PinchPhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E025FAFC170000C5EC /* PinchPhotosPresenter.swift */; };
+		F004E8E825FAFC170000C5EC /* PinchPhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E225FAFC170000C5EC /* PinchPhotosRouter.swift */; };
+		F004E8E925FAFC170000C5EC /* PinchPhotosModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E325FAFC170000C5EC /* PinchPhotosModels.swift */; };
+		F004E8EA25FAFC170000C5EC /* PinchPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E425FAFC170000C5EC /* PinchPhotosViewController.swift */; };
+		F004E8EB25FAFC170000C5EC /* PinchPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E525FAFC170000C5EC /* PinchPhotosInteractor.swift */; };
+		F004E8F125FAFDC50000C5EC /* PinchPhotosFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8F025FAFDC50000C5EC /* PinchPhotosFactory.swift */; };
 		F0387FD325F50F9700241D3B /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FD225F50F9700241D3B /* AlbumViewController.swift */; };
 		F0387FD725F512B000241D3B /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FD625F512B000241D3B /* AlbumViewModel.swift */; };
 		F0387FDB25F512BE00241D3B /* AlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FDA25F512BE00241D3B /* AlbumRepository.swift */; };
@@ -30,13 +37,23 @@
 		F038800925F53DBD00241D3B /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038800825F53DBD00241D3B /* JSONDecoder+Extension.swift */; };
 		F038800E25F53DBF00241D3B /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038800825F53DBD00241D3B /* JSONDecoder+Extension.swift */; };
 		F038801225F53DD100241D3B /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038801125F53DD100241D3B /* Single+Extension.swift */; };
-		F038801525F53DD300241D3B /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038801125F53DD100241D3B /* Single+Extension.swift */; };
 		F0524C2625F7037400713385 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C2525F7037400713385 /* RealmManager.swift */; };
 		F0524C2B25F7037700713385 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C2525F7037400713385 /* RealmManager.swift */; };
 		F0524C3D25F707F400713385 /* AlbumRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C3C25F707F400713385 /* AlbumRealmObject.swift */; };
 		F0524C3E25F707F400713385 /* AlbumRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C3C25F707F400713385 /* AlbumRealmObject.swift */; };
 		F0524C4225F7085700713385 /* PhotoRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C4125F7085700713385 /* PhotoRealmObject.swift */; };
 		F0524C4325F7085700713385 /* PhotoRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0524C4125F7085700713385 /* PhotoRealmObject.swift */; };
+		F078C39A25F83F8D00F6D35F /* PinchAlbumPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39425F83F8D00F6D35F /* PinchAlbumPresenter.swift */; };
+		F078C39B25F83F8D00F6D35F /* PinchAlbumWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39525F83F8D00F6D35F /* PinchAlbumWorker.swift */; };
+		F078C39C25F83F8D00F6D35F /* PinchAlbumRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39625F83F8D00F6D35F /* PinchAlbumRouter.swift */; };
+		F078C39D25F83F8D00F6D35F /* PinchAlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39725F83F8D00F6D35F /* PinchAlbumModels.swift */; };
+		F078C39E25F83F8D00F6D35F /* PinchAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39825F83F8D00F6D35F /* PinchAlbumViewController.swift */; };
+		F078C39F25F83F8D00F6D35F /* PinchAlbumInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39925F83F8D00F6D35F /* PinchAlbumInteractor.swift */; };
+		F078C3A325F840E700F6D35F /* PinchAlbumFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C3A225F840E700F6D35F /* PinchAlbumFactory.swift */; };
+		F078C3A925F8425700F6D35F /* HandleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75B725F547B700BCFB90 /* HandleError.swift */; };
+		F078C3BF25F846AC00F6D35F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C3BE25F846AC00F6D35F /* BaseViewController.swift */; };
+		F078C3C225F846D900F6D35F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C3BE25F846AC00F6D35F /* BaseViewController.swift */; };
+		F078C3C925F8470E00F6D35F /* PinchAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0387FF725F53B3E00241D3B /* PinchAPIProvider.swift */; };
 		F09345A825F06F7C00CE243E /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345A725F06F7C00CE243E /* AlbumResponse.swift */; };
 		F09345AD25F06F8000CE243E /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345A725F06F7C00CE243E /* AlbumResponse.swift */; };
 		F09345B325F0701000CE243E /* PinchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09345B225F0701000CE243E /* PinchAPI.swift */; };
@@ -48,7 +65,6 @@
 		F0AD84BD25F6DD2E004843C4 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84BC25F6DD2E004843C4 /* PhotoDetailViewController.swift */; };
 		F0AD84C125F6DDED004843C4 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84C025F6DDED004843C4 /* PhotoDetailViewModel.swift */; };
 		F0AD84C625F6DEAE004843C4 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84C525F6DEAE004843C4 /* PhotoDetailView.swift */; };
-		F0AD84C925F6DEB1004843C4 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD84C525F6DEAE004843C4 /* PhotoDetailView.swift */; };
 		F0CB75B425F546D500BCFB90 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75B325F546D500BCFB90 /* BaseViewModel.swift */; };
 		F0CB75B825F547B700BCFB90 /* HandleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75B725F547B700BCFB90 /* HandleError.swift */; };
 		F0CB75BC25F5482500BCFB90 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75BB25F5482500BCFB90 /* Reachability.swift */; };
@@ -66,7 +82,6 @@
 		F0CB75E225F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */; };
 		F0CB75E325F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75E125F567FA00BCFB90 /* NSObject+Extensions.swift */; };
 		F0CB75F225F5700700BCFB90 /* PinchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */; };
-		F0CB75F325F5700700BCFB90 /* PinchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75F125F5700700BCFB90 /* PinchCoordinator.swift */; };
 		F0CB760725F5AC4B00BCFB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB760625F5AC4B00BCFB90 /* Main.storyboard */; };
 		F0CB760825F5AC4B00BCFB90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CB760625F5AC4B00BCFB90 /* Main.storyboard */; };
 		F0F9337625F655B1008BED1C /* PhotosModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F9337525F655B1008BED1C /* PhotosModels.swift */; };
@@ -94,6 +109,12 @@
 		DB6D421D71E6A0EC073F2102 /* Pods_PinchNL_VIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchNL_VIP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A88F884892E77307829D7A /* PinchNL-VIP.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "PinchNL-VIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9CB4340FD570C5A1509C7C /* Pods-PinchNL-VIP.integ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.integ.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.integ.xcconfig"; sourceTree = "<group>"; };
+		F004E8E025FAFC170000C5EC /* PinchPhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosPresenter.swift; sourceTree = "<group>"; };
+		F004E8E225FAFC170000C5EC /* PinchPhotosRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosRouter.swift; sourceTree = "<group>"; };
+		F004E8E325FAFC170000C5EC /* PinchPhotosModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosModels.swift; sourceTree = "<group>"; };
+		F004E8E425FAFC170000C5EC /* PinchPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosViewController.swift; sourceTree = "<group>"; };
+		F004E8E525FAFC170000C5EC /* PinchPhotosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosInteractor.swift; sourceTree = "<group>"; };
+		F004E8F025FAFDC50000C5EC /* PinchPhotosFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosFactory.swift; sourceTree = "<group>"; };
 		F0387FD225F50F9700241D3B /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		F0387FD625F512B000241D3B /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		F0387FDA25F512BE00241D3B /* AlbumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRepository.swift; sourceTree = "<group>"; };
@@ -108,6 +129,14 @@
 		F0524C2525F7037400713385 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		F0524C3C25F707F400713385 /* AlbumRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRealmObject.swift; sourceTree = "<group>"; };
 		F0524C4125F7085700713385 /* PhotoRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRealmObject.swift; sourceTree = "<group>"; };
+		F078C39425F83F8D00F6D35F /* PinchAlbumPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumPresenter.swift; sourceTree = "<group>"; };
+		F078C39525F83F8D00F6D35F /* PinchAlbumWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumWorker.swift; sourceTree = "<group>"; };
+		F078C39625F83F8D00F6D35F /* PinchAlbumRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumRouter.swift; sourceTree = "<group>"; };
+		F078C39725F83F8D00F6D35F /* PinchAlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumModels.swift; sourceTree = "<group>"; };
+		F078C39825F83F8D00F6D35F /* PinchAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumViewController.swift; sourceTree = "<group>"; };
+		F078C39925F83F8D00F6D35F /* PinchAlbumInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumInteractor.swift; sourceTree = "<group>"; };
+		F078C3A225F840E700F6D35F /* PinchAlbumFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumFactory.swift; sourceTree = "<group>"; };
+		F078C3BE25F846AC00F6D35F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F09345A725F06F7C00CE243E /* AlbumResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumResponse.swift; sourceTree = "<group>"; };
 		F09345B225F0701000CE243E /* PinchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAPI.swift; sourceTree = "<group>"; };
 		F09345BA25F0706E00CE243E /* PhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResponse.swift; sourceTree = "<group>"; };
@@ -219,6 +248,7 @@
 		52F586F1ADE613283F65D7DC /* PinchNL-VIP */ = {
 			isa = PBXGroup;
 			children = (
+				F05A8FA025F83D4300DDFC16 /* Features */,
 			);
 			path = "PinchNL-VIP";
 			sourceTree = "<group>";
@@ -284,6 +314,19 @@
 			path = "PinchNL-Core";
 			sourceTree = "<group>";
 		};
+		F004E8DF25FAFBF40000C5EC /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F004E8E025FAFC170000C5EC /* PinchPhotosPresenter.swift */,
+				F004E8E225FAFC170000C5EC /* PinchPhotosRouter.swift */,
+				F004E8E325FAFC170000C5EC /* PinchPhotosModels.swift */,
+				F004E8E425FAFC170000C5EC /* PinchPhotosViewController.swift */,
+				F004E8E525FAFC170000C5EC /* PinchPhotosInteractor.swift */,
+				F004E8F025FAFDC50000C5EC /* PinchPhotosFactory.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		F0387FE225F539F400241D3B /* Album */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +387,29 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		F05A8FA025F83D4300DDFC16 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F004E8DF25FAFBF40000C5EC /* Photos */,
+				F05A8FA125F83D4A00DDFC16 /* Album */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F05A8FA125F83D4A00DDFC16 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				F078C39425F83F8D00F6D35F /* PinchAlbumPresenter.swift */,
+				F078C39525F83F8D00F6D35F /* PinchAlbumWorker.swift */,
+				F078C39625F83F8D00F6D35F /* PinchAlbumRouter.swift */,
+				F078C39725F83F8D00F6D35F /* PinchAlbumModels.swift */,
+				F078C39825F83F8D00F6D35F /* PinchAlbumViewController.swift */,
+				F078C39925F83F8D00F6D35F /* PinchAlbumInteractor.swift */,
+				F078C3A225F840E700F6D35F /* PinchAlbumFactory.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
 		F09345B125F06FFC00CE243E /* Targets */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +460,7 @@
 				F0CB75B325F546D500BCFB90 /* BaseViewModel.swift */,
 				F0CB75B725F547B700BCFB90 /* HandleError.swift */,
 				F0CB75C125F549EB00BCFB90 /* PinchViewController.swift */,
+				F078C3BE25F846AC00F6D35F /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -644,6 +711,7 @@
 				CA0DDD620B8F59CC2F7BB83C /* SceneDelegate.swift in Sources */,
 				F0AD84C625F6DEAE004843C4 /* PhotoDetailView.swift in Sources */,
 				F0CB75BC25F5482500BCFB90 /* Reachability.swift in Sources */,
+				F078C3C225F846D900F6D35F /* BaseViewController.swift in Sources */,
 				F0CB75B825F547B700BCFB90 /* HandleError.swift in Sources */,
 				F0CB75F225F5700700BCFB90 /* PinchCoordinator.swift in Sources */,
 				F0CB75B425F546D500BCFB90 /* BaseViewModel.swift in Sources */,
@@ -664,17 +732,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CB75E325F567FA00BCFB90 /* NSObject+Extensions.swift in Sources */,
+				F078C39C25F83F8D00F6D35F /* PinchAlbumRouter.swift in Sources */,
+				F004E8EB25FAFC170000C5EC /* PinchPhotosInteractor.swift in Sources */,
+				F078C3BF25F846AC00F6D35F /* BaseViewController.swift in Sources */,
+				F078C3A925F8425700F6D35F /* HandleError.swift in Sources */,
 				F0CB75DE25F567D600BCFB90 /* UICollectionView+Extensions.swift in Sources */,
 				F0CB75D325F5651500BCFB90 /* AlbumCollectionViewCell.swift in Sources */,
 				F0CB75D925F5654000BCFB90 /* PinchCollectionViewCell.swift in Sources */,
+				F004E8F125FAFDC50000C5EC /* PinchPhotosFactory.swift in Sources */,
 				2FE761C8425A1ACAD84508D7 /* AlbumModels.swift in Sources */,
+				F078C3C925F8470E00F6D35F /* PinchAPIProvider.swift in Sources */,
+				F004E8E925FAFC170000C5EC /* PinchPhotosModels.swift in Sources */,
 				F0524C2B25F7037700713385 /* RealmManager.swift in Sources */,
+				F078C39D25F83F8D00F6D35F /* PinchAlbumModels.swift in Sources */,
+				F004E8EA25FAFC170000C5EC /* PinchPhotosViewController.swift in Sources */,
 				F0AD84AC25F6D434004843C4 /* UIImageView+Extensions.swift in Sources */,
+				F004E8E825FAFC170000C5EC /* PinchPhotosRouter.swift in Sources */,
 				F0524C4325F7085700713385 /* PhotoRealmObject.swift in Sources */,
 				052EC7D6954955A12147F5E1 /* AppDelegate.swift in Sources */,
+				F078C39B25F83F8D00F6D35F /* PinchAlbumWorker.swift in Sources */,
+				F078C39F25F83F8D00F6D35F /* PinchAlbumInteractor.swift in Sources */,
 				F09345BC25F0706E00CE243E /* PhotoResponse.swift in Sources */,
-				F0AD84C925F6DEB1004843C4 /* PhotoDetailView.swift in Sources */,
-				F0CB75F325F5700700BCFB90 /* PinchCoordinator.swift in Sources */,
+				F078C3A325F840E700F6D35F /* PinchAlbumFactory.swift in Sources */,
+				F078C39E25F83F8D00F6D35F /* PinchAlbumViewController.swift in Sources */,
+				F004E8E625FAFC170000C5EC /* PinchPhotosPresenter.swift in Sources */,
 				F09345B425F0701000CE243E /* PinchAPI.swift in Sources */,
 				F0CB75CE25F55C3400BCFB90 /* PinchView.swift in Sources */,
 				8F856A50AA03EA4A24790ECF /* SceneDelegate.swift in Sources */,
@@ -683,9 +764,10 @@
 				F038800E25F53DBF00241D3B /* JSONDecoder+Extension.swift in Sources */,
 				F0CB75C925F555DA00BCFB90 /* AlbumView.swift in Sources */,
 				F0F9337725F655B1008BED1C /* PhotosModels.swift in Sources */,
-				F038801525F53DD300241D3B /* Single+Extension.swift in Sources */,
 				F0524C3E25F707F400713385 /* AlbumRealmObject.swift in Sources */,
 				F0F9338125F67314008BED1C /* PhotosView.swift in Sources */,
+				F004E8DC25FACFA90000C5EC /* Reachability.swift in Sources */,
+				F078C39A25F83F8D00F6D35F /* PinchAlbumPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,8 +14,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let navigation = UINavigationController()
-        let coordinator = PinchCoordinator(navigationController: navigation)
-        coordinator.startAlbum()
+        /// MVVM:
+            let coordinator = PinchCoordinator(navigationController: navigation)
+            coordinator.startAlbum()
+        /// VIP:
+//        let factory = PinchAlbumFactory()
+//        let viewController = factory.setup()
+//        navigation.pushViewController(viewController, animated: true)
+        
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()

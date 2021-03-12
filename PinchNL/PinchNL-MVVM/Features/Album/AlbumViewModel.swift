@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 
 protocol AlbumViewModelContract {
-    var albums:Driver<[AlbumModels.ViewModel]> { get }
+    var albums:Driver<[AlbumModels.ViewData]> { get }
     var refresh: Driver<()> { get set }
 
     func requestAlbum(page: Int)
@@ -17,8 +17,8 @@ protocol AlbumViewModelContract {
 }
 class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
     
-    private var _albums = PublishSubject<[AlbumModels.ViewModel]>()
-     var albums:Driver<[AlbumModels.ViewModel]> {
+    private var _albums = PublishSubject<[AlbumModels.ViewData]>()
+     var albums:Driver<[AlbumModels.ViewData]> {
         _albums.asDriver(onErrorJustReturn: [])
     }
     
@@ -27,7 +27,7 @@ class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
         _refresh.asDriver(onErrorJustReturn: ())
     }()
     
-    private var albumModels: [AlbumModels.ViewModel] = []
+    private var albumModels: [AlbumModels.ViewData] = []
     
     private let repository: AlbumRepositoryContract
     
@@ -50,9 +50,9 @@ class AlbumViewModel: BaseViewModel, AlbumViewModelContract {
         requestAlbum(page: page)
     }
     
-    private func makeAlbumListModel(_ response: [AlbumResponse]) -> [AlbumModels.ViewModel] {
+    private func makeAlbumListModel(_ response: [AlbumResponse]) -> [AlbumModels.ViewData] {
         response.forEach {
-            let albumModel = AlbumModels.ViewModel(
+            let albumModel = AlbumModels.ViewData(
                 id: String($0.id),
                 title: $0.title
             )

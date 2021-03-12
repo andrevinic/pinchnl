@@ -29,6 +29,7 @@ class PhotoDetailViewController: PinchViewController {
     private func configureView() {
         view = _view
         let model = viewModel.photoSelected
+        self.title = "Details"
         _view.configureView(model: model)
     }
     

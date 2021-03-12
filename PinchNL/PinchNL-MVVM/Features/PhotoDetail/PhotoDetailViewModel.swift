@@ -8,14 +8,14 @@
 import UIKit
 
 protocol PhotoDetailViewModelContract {
-    var photoSelected: PhotosModels.ViewModel { get set }
+    var photoSelected: PhotosModels.ViewData { get set }
 }
 
 class PhotoDetailViewModel: BaseViewModel, PhotoDetailViewModelContract {
     
-    var photoSelected: PhotosModels.ViewModel
+    var photoSelected: PhotosModels.ViewData
     
-    init(photoSelected: PhotosModels.ViewModel) {
+    init(photoSelected: PhotosModels.ViewData) {
         self.photoSelected = photoSelected
     }
     

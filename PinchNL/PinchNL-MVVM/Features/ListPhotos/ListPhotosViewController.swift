@@ -9,7 +9,7 @@ import UIKit
 
 class ListPhotosViewController: PinchViewController {
     
-    private var choosedPhoto: PhotosModels.ViewModel?
+    private var choosedPhoto: PhotosModels.ViewData?
 
     private let viewModel: ListPhotosViewModelContract
     private let coordinator: Coordinator
@@ -35,6 +35,7 @@ class ListPhotosViewController: PinchViewController {
     private func configureView() {
         view = _view
         self._view.delegate = self
+        self.title = "Photos"
         requestPhotos()
     }
     
@@ -57,7 +58,7 @@ class ListPhotosViewController: PinchViewController {
         
         self._view.collectionView
             .rx
-            .modelSelected(PhotosModels.ViewModel.self)
+            .modelSelected(PhotosModels.ViewData.self)
             .subscribe (
                 onNext: { [weak self] (response) in
                     self?.choosedPhoto = response
