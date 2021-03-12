@@ -11,8 +11,8 @@ import UIKit
 protocol Coordinator: AnyObject {
     var navigationController: UINavigationController { get set }
     func startAlbum()
-    func startPhotos(model: AlbumModels.ViewModel, page: Int)
-    func startPhotoDetail(model: PhotosModels.ViewModel)
+    func startPhotos(model: AlbumModels.ViewData, page: Int)
+    func startPhotoDetail(model: PhotosModels.ViewData)
 }
 
 class PinchCoordinator: Coordinator {
@@ -40,7 +40,7 @@ class PinchCoordinator: Coordinator {
         navigationController.pushViewController(viewController, animated: false)
     }
     
-    func startPhotos(model: AlbumModels.ViewModel, page: Int) {
+    func startPhotos(model: AlbumModels.ViewData, page: Int) {
         let provider = PinchAPIProvider<PinchAPI>()
         let service = ListPhotosService(provider: provider)
         let realmManager = RealmManager()
@@ -66,7 +66,7 @@ class PinchCoordinator: Coordinator {
         navigationController.pushViewController(viewController, animated: false)
     }
     
-    func startPhotoDetail(model: PhotosModels.ViewModel) {
+    func startPhotoDetail(model: PhotosModels.ViewData) {
         let viewModel = PhotoDetailViewModel(photoSelected: model)
         let view = PhotoDetailView()
         let viewController = PhotoDetailViewController(view: view, viewModel: viewModel)

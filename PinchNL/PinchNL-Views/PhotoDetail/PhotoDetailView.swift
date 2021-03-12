@@ -8,12 +8,12 @@
 import UIKit
 
 protocol PhotoDetailViewConfiguration: UIView {
-    func configureView(model: PhotosModels.ViewModel)
+    func configureView(model: PhotosModels.ViewData)
 }
 
 class PhotoDetailView: PinchView, PhotoDetailViewConfiguration, UIScrollViewDelegate {
     
-    func configureView(model: PhotosModels.ViewModel) {
+    func configureView(model: PhotosModels.ViewData) {
         imageView.loadFrom(url: model.url)
     }
     

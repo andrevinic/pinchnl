@@ -12,7 +12,7 @@ class AlbumViewController: PinchViewController {
     
     // MARK: - Properties
     private var page = 1
-    private var choosedAlbum: AlbumModels.ViewModel?
+    private var choosedAlbum: AlbumModels.ViewData?
 
     // MARK: - ViewModel
     private let viewModel: AlbumViewModelContract
@@ -44,6 +44,7 @@ class AlbumViewController: PinchViewController {
     private func configureView() {
         view = _view
         self._view.delegate = self
+        self.title = "Albums"
         requestAlbum()
     }
     
@@ -62,7 +63,7 @@ class AlbumViewController: PinchViewController {
         
         self._view.collectionView
             .rx
-            .modelSelected(AlbumModels.ViewModel.self)
+            .modelSelected(AlbumModels.ViewData.self)
             .subscribe (
                 onNext: { [weak self] (response) in
                     self?.choosedAlbum = response

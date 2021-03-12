@@ -15,8 +15,8 @@ protocol AlbumViewDelegate: UICollectionViewDelegate {
 protocol AlbumViewConfiguration: UIView {
     var collectionView: UICollectionView { get set }
     var delegate: AlbumViewDelegate? { get set }
-    func configureView(viewModel: [AlbumModels.ViewModel])
     func endRefreshing()
+    func reloadData()
 }
 
 class AlbumView: PinchView, AlbumViewConfiguration {
@@ -32,10 +32,6 @@ class AlbumView: PinchView, AlbumViewConfiguration {
         didSet {
             collectionView.delegate = delegate
         }
-    }
-    
-    func configureView(viewModel: [AlbumModels.ViewModel]) {
-        
     }
     
     lazy var collectionView: UICollectionView = {
@@ -75,5 +71,9 @@ class AlbumView: PinchView, AlbumViewConfiguration {
     
     func endRefreshing() {
         self.refreshControl.endRefreshing()
+    }
+    
+    func reloadData() {
+        self.collectionView.reloadData()
     }
 }
