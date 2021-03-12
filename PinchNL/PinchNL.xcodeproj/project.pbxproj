@@ -21,7 +21,6 @@
 		F004E8DC25FACFA90000C5EC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB75BB25F5482500BCFB90 /* Reachability.swift */; };
 		F004E8E625FAFC170000C5EC /* PinchPhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E025FAFC170000C5EC /* PinchPhotosPresenter.swift */; };
 		F004E8E825FAFC170000C5EC /* PinchPhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E225FAFC170000C5EC /* PinchPhotosRouter.swift */; };
-		F004E8E925FAFC170000C5EC /* PinchPhotosModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E325FAFC170000C5EC /* PinchPhotosModels.swift */; };
 		F004E8EA25FAFC170000C5EC /* PinchPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E425FAFC170000C5EC /* PinchPhotosViewController.swift */; };
 		F004E8EB25FAFC170000C5EC /* PinchPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8E525FAFC170000C5EC /* PinchPhotosInteractor.swift */; };
 		F004E8F125FAFDC50000C5EC /* PinchPhotosFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E8F025FAFDC50000C5EC /* PinchPhotosFactory.swift */; };
@@ -46,7 +45,6 @@
 		F078C39A25F83F8D00F6D35F /* PinchAlbumPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39425F83F8D00F6D35F /* PinchAlbumPresenter.swift */; };
 		F078C39B25F83F8D00F6D35F /* PinchAlbumWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39525F83F8D00F6D35F /* PinchAlbumWorker.swift */; };
 		F078C39C25F83F8D00F6D35F /* PinchAlbumRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39625F83F8D00F6D35F /* PinchAlbumRouter.swift */; };
-		F078C39D25F83F8D00F6D35F /* PinchAlbumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39725F83F8D00F6D35F /* PinchAlbumModels.swift */; };
 		F078C39E25F83F8D00F6D35F /* PinchAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39825F83F8D00F6D35F /* PinchAlbumViewController.swift */; };
 		F078C39F25F83F8D00F6D35F /* PinchAlbumInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C39925F83F8D00F6D35F /* PinchAlbumInteractor.swift */; };
 		F078C3A325F840E700F6D35F /* PinchAlbumFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F078C3A225F840E700F6D35F /* PinchAlbumFactory.swift */; };
@@ -111,7 +109,6 @@
 		EA9CB4340FD570C5A1509C7C /* Pods-PinchNL-VIP.integ.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchNL-VIP.integ.xcconfig"; path = "Target Support Files/Pods-PinchNL-VIP/Pods-PinchNL-VIP.integ.xcconfig"; sourceTree = "<group>"; };
 		F004E8E025FAFC170000C5EC /* PinchPhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosPresenter.swift; sourceTree = "<group>"; };
 		F004E8E225FAFC170000C5EC /* PinchPhotosRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosRouter.swift; sourceTree = "<group>"; };
-		F004E8E325FAFC170000C5EC /* PinchPhotosModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosModels.swift; sourceTree = "<group>"; };
 		F004E8E425FAFC170000C5EC /* PinchPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosViewController.swift; sourceTree = "<group>"; };
 		F004E8E525FAFC170000C5EC /* PinchPhotosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosInteractor.swift; sourceTree = "<group>"; };
 		F004E8F025FAFDC50000C5EC /* PinchPhotosFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchPhotosFactory.swift; sourceTree = "<group>"; };
@@ -132,7 +129,6 @@
 		F078C39425F83F8D00F6D35F /* PinchAlbumPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumPresenter.swift; sourceTree = "<group>"; };
 		F078C39525F83F8D00F6D35F /* PinchAlbumWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumWorker.swift; sourceTree = "<group>"; };
 		F078C39625F83F8D00F6D35F /* PinchAlbumRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumRouter.swift; sourceTree = "<group>"; };
-		F078C39725F83F8D00F6D35F /* PinchAlbumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumModels.swift; sourceTree = "<group>"; };
 		F078C39825F83F8D00F6D35F /* PinchAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumViewController.swift; sourceTree = "<group>"; };
 		F078C39925F83F8D00F6D35F /* PinchAlbumInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumInteractor.swift; sourceTree = "<group>"; };
 		F078C3A225F840E700F6D35F /* PinchAlbumFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAlbumFactory.swift; sourceTree = "<group>"; };
@@ -319,7 +315,6 @@
 			children = (
 				F004E8E025FAFC170000C5EC /* PinchPhotosPresenter.swift */,
 				F004E8E225FAFC170000C5EC /* PinchPhotosRouter.swift */,
-				F004E8E325FAFC170000C5EC /* PinchPhotosModels.swift */,
 				F004E8E425FAFC170000C5EC /* PinchPhotosViewController.swift */,
 				F004E8E525FAFC170000C5EC /* PinchPhotosInteractor.swift */,
 				F004E8F025FAFDC50000C5EC /* PinchPhotosFactory.swift */,
@@ -402,7 +397,6 @@
 				F078C39425F83F8D00F6D35F /* PinchAlbumPresenter.swift */,
 				F078C39525F83F8D00F6D35F /* PinchAlbumWorker.swift */,
 				F078C39625F83F8D00F6D35F /* PinchAlbumRouter.swift */,
-				F078C39725F83F8D00F6D35F /* PinchAlbumModels.swift */,
 				F078C39825F83F8D00F6D35F /* PinchAlbumViewController.swift */,
 				F078C39925F83F8D00F6D35F /* PinchAlbumInteractor.swift */,
 				F078C3A225F840E700F6D35F /* PinchAlbumFactory.swift */,
@@ -742,9 +736,7 @@
 				F004E8F125FAFDC50000C5EC /* PinchPhotosFactory.swift in Sources */,
 				2FE761C8425A1ACAD84508D7 /* AlbumModels.swift in Sources */,
 				F078C3C925F8470E00F6D35F /* PinchAPIProvider.swift in Sources */,
-				F004E8E925FAFC170000C5EC /* PinchPhotosModels.swift in Sources */,
 				F0524C2B25F7037700713385 /* RealmManager.swift in Sources */,
-				F078C39D25F83F8D00F6D35F /* PinchAlbumModels.swift in Sources */,
 				F004E8EA25FAFC170000C5EC /* PinchPhotosViewController.swift in Sources */,
 				F0AD84AC25F6D434004843C4 /* UIImageView+Extensions.swift in Sources */,
 				F004E8E825FAFC170000C5EC /* PinchPhotosRouter.swift in Sources */,

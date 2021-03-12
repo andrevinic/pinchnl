@@ -49,6 +49,7 @@ class PinchPhotosViewController: BaseViewController, PinchPhotosDisplayLogic {
     func displayPhotos(viewModel: PhotosModels.ViewModel) {
         self.photosList = viewModel.list
         self._view.collectionView.reloadData()
+        self._view.endRefreshing()
     }
     
 }
@@ -62,13 +63,11 @@ extension PinchPhotosViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension PinchPhotosViewController: PhotosViewDelegate {
-    
     func didTapPhoto() {
-        
     }
     
     func didTapRefresh() {
-        
+        self.interactor.requestPhotos()
     }
 }
 
@@ -87,6 +86,4 @@ extension PinchPhotosViewController: UICollectionViewDataSource, UICollectionVie
         )
         return cell
     }
-    
-    
 }

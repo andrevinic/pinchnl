@@ -32,4 +32,7 @@ enum AlbumModels {
         }
     }
     
+    struct AlbumError {
+        let error: Error
+    }
 }

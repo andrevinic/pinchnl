@@ -21,7 +21,7 @@ protocol PinchAlbumWorkerLogic {
 class PinchAlbumWorker: PinchAlbumWorkerLogic {
     
     private let provider: PinchAPIProvider<PinchAPI>
-    //    var reachabilityStatus: Reachability
+
     init(
         provider: PinchAPIProvider<PinchAPI>
     ) {
@@ -69,10 +69,11 @@ class PinchAlbumWorker: PinchAlbumWorkerLogic {
                                                     )
                                                 })
                     ))
+                } else {
+                    completion(.failure(ServiceError.invalidResponse))
                 }
             case .failure(let error):
-                break
-                
+                completion(.failure(ServiceError.generic(message: error.localizedDescription)))
             }
         })
     }

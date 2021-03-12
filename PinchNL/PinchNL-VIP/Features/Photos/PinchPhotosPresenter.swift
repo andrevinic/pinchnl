@@ -32,4 +32,5 @@ class PinchPhotosPresenter: PinchPhotosPresentationLogic {
         })
         viewController?.displayPhotos(viewModel: viewModel)
     }
+
 }

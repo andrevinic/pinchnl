@@ -15,13 +15,16 @@ import UIKit
 protocol PinchAlbumPresentationLogic {
     func presentAlbum(response: AlbumModels.Response)
     func presentPhotos()
+    func presentPhotosError(response: PhotosModels.PhotosError)
+    func presentAlbumError(response: AlbumModels.AlbumError)
+
 }
 
 class PinchAlbumPresenter: PinchAlbumPresentationLogic {
     
     weak var viewController: PinchAlbumDisplayLogic?
     
-    // MARK: Do something
+    // MARK: Present Album
     
     func presentAlbum(response: AlbumModels.Response) {
         let viewModel = AlbumModels.ViewModel(albumList: response.albumList.compactMap {
@@ -33,7 +36,18 @@ class PinchAlbumPresenter: PinchAlbumPresentationLogic {
         viewController?.displayAlbum(viewModel: viewModel)
     }
     
+    // MARK: Present Photos
+
     func presentPhotos() {
         viewController?.displayPhotos()
+    }
+    
+    func presentPhotosError(response: PhotosModels.PhotosError) {
+        /// TODO: - Should handle error
+    }
+
+    func presentAlbumError(response: AlbumModels.AlbumError) {
+        /// TODO: - Should handle error
+
     }
 }

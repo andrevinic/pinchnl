@@ -8,8 +8,8 @@
 import UIKit
 
 protocol AlbumViewDelegate: UICollectionViewDelegate {
-    func didTapAlbum()
     func didTapRefresh()
+    func didTapAlbum()
 }
 
 protocol AlbumViewConfiguration: UIView {
